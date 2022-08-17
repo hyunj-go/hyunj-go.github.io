@@ -35,7 +35,7 @@
 	
             	if(!alert("복사되었습니다.")){
                     setTimeout(function(){
-                        copyBtn.focus();
+                        $(copyBtn).find('span').attr('tabindex','0').focus();
                     },400)
                 }
                 //copyBtn.focus();
