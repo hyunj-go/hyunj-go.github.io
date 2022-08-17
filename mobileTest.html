@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="wrap">
-	<p>testtest!!</p>
+	<p>testtest$$</p>
 	
     		<button type="button" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></button>
 	
@@ -34,7 +34,9 @@
         function copyToClipboard(copyBtn){
 	
             	alert("복사되었습니다.");
-                document.querySelector(".btn-copy").focus();
+                setTimeout(funtion(){
+                    copyBtn.focus();
+                },400)
                 //copyBtn.focus();
 		
 		
