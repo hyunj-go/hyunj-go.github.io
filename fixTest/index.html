@@ -6,60 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .wrap {position:fixed;top:0;left:0;bottom:0;right:0;overflow:auto;background:#fff;}
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="inner">
-            <div style="height:1000px;">
-                <p>!hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-            </div>
-            <div style="background:blue;height:1000px;">
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hellohello hello hello hello hello hello hello hello hello hello</p>
-            </div>
-            <div style="background:brown;height:1000px;">
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-            </div>
-            <div style="height:1000px;">
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-            </div>
-            <div style="background:green;height:1000px;">
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-                <p>hello hello hello hello hello hello hello hello hello hello</p>
-            </div>
-        </div>
-    </div>
+    <button class="btn btn-copy" onclick="copyToClipboard();"><span>Copy Address</span></button>
+    <button class="btn2" onclick="buttonfn();">버튼2</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function copyToClipboard(){
+	
+            if(!alert("복사되었습니다.")){ 
+                setTimeout(function(){
+                    copyBtn.focus();
+                },1);
+            }
+            
+        }
+
+        function buttonfn() {
+            alert("alert.")
+        }
+    </script>
 </body>
 </html>
