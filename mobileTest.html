@@ -48,10 +48,10 @@
         });
 	    
 	$('.top').click(function(){
-		$('#mainWrap').scrollTop(0);
-		setTimeout(function(){
+		$('#mainWrap').animate({scrollTop:0}, 'fast',function(){
 			$('.btn2').focus();
-            }, 100);
+		});
+		
 	});
     </script>
 </div>
