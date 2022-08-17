@@ -112,7 +112,7 @@ $(function() {
     $(".popup").show();
     
     // area hidden 처리
-    $("#wrap").hide();
+    $("#wrap").css('visibility', 'hidden');
     setTimeout(function() {
 			$(".popup").attr({"aria-hidden":"false", "tabindex": "1"}).focus();
     }, 500);
@@ -122,7 +122,7 @@ $(function() {
   // popup close event
   $('.btn_close').on('click', function(event) {
     $('.popup').hide();
-		$("#wrap").show();
+		$("#wrap").css('visibility', 'visible');
 		$(".popup").attr({"aria-hidden":"true", "tabindex": "-1"}).blur();
     event.stopPropagation();
   });
