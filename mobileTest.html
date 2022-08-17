@@ -31,11 +31,14 @@
     <script>
         function copyToClipboard(copyBtn){
 	
-            	alert("복사되었습니다.");
+            	if(!alert("복사되었습니다.")){
+			setTimeout(function(){
+			    copyBtn.focus();
+				alert('포커스');
+			},400);
+		}
 		
-		setTimeout(function(){
-		    copyBtn.focus();
-		},400);
+		
             
         }
 
