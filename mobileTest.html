@@ -13,7 +13,7 @@
 <div class="wrap">
 	<p>testestestestestestes</p>
 	
-    		<button class="btn btn-copy" onclick="copyToClipboard(); $event.target.focus();"><span>Copy Address</span></button>
+    		<button class="btn btn-copy" onclick="copyToClipboard();"><span>Copy Address</span></button>
 	
    	<button class="btn2" onclick="buttonfn();">버튼2</button>
 	<br><br>
@@ -34,7 +34,8 @@
         function copyToClipboard(){
 	
             	if(!alert("복사되었습니다.")){
-			setTimeout(function(){copyBtn.focus(); return;}, 1);
+			setTimeout(function(){return;}, 1);
+			copyBtn.focus();
 		}
 		
         }
