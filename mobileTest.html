@@ -50,7 +50,9 @@
         });
 	    
 	$('.top').click(function(){
-		$('documnet, body').animate({scrollTop:'0'}, 'slow');
+		$("html, body").animate({scrollTop:'0'}, 'slow', function(){
+			$('.btn2').focus();
+		});
 		
 	});
     </script>
