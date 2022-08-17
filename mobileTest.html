@@ -51,7 +51,8 @@
 	    
 	$('.top').click(function(){
 		$("html, body").animate({scrollTop:'0'}, 'slow', function(){
-			$('.btn2').focusin();
+			$('.btn2').focus();
+			$('p').text('!!!!!!!');
 		});
 		
 	});
