@@ -11,9 +11,9 @@
 </head>
 <body>
 <div class="wrap">
-	<p>testtest</p>
+	<p>testtesttttt</p>
 	
-    		<a href="javascript:void(0)" role="button" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
+    		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
    	<button class="btn2" onclick="buttonfn();">버튼2</button>
 	<br><br>
@@ -35,8 +35,8 @@
 	
             	if(!alert("복사되었습니다.")){
                     setTimeout(function(){
-                        $(copyBtn).find('span').attr('tabindex','0').focus();
-                    },400)
+                        document.getElementById("copy").focus();
+                    },1)
                 }
                 //copyBtn.focus();
 
