@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* reset */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+.blind {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0); /* rect(<top>, <right>, <bottom>, <left>) */
+}
+
+/* popup */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  overflow: hidden;
+  width: 300px;
+  height: 240px;
+  margin: -130px -150px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px #eee;
+}
+.popup_header {
+  background-color: #eee;
+  border-bottom: 1px solid #999;
+  padding: 10px 15px;
+}
+.popup_header h2 {
+  font-size: 16px;
+}
+.popup_body {
+  padding: 15px;
+  line-height: 1.4;
+}
+.popup_body p {
+  margin-bottom: 15px;
+}
+.popup .btn_close {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  border: 0;
+  background-color: transparent;
+}
+.popup .btn_close:after {
+  content: '×';
+  font-size: 30px;
+  color: #666;
+  line-height: 30px;
+}
+.btn_open {
+  font-size: 16px;
+  margin: 15px;
+}
+    </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Layer Popup</h1>
+  <button type="button" class="btn_open">팝업열기</button>
+
+  <p>aria-hidden 부모가 true이면 자식요소도 true됨</p>
+  <p>aria-hidden으로만은 iOS에서는 focus() 메서드로는 스크린리더 포커스를 이동시킬 수 없음 tabindex값을 1로 처리</p>
+  <p>닫기를 누르면 다시 팝업 열기 버튼을 포커스를 이동시킴</p>
+</div>
+<div class="popup" aria-hidden="true" style="display: none;">
+  <div class="popup_header">
+    <h2>레이어 팝업</h2>
+  </div>
+  <div class="popup_body">
+    <a href="#">링크1</a>
+    <a href="#">링크2</a>
+    <p>
+      지식에도 두 가지 종류의 지식이 있습니다. 
+      영국의 시인이자 평론가이며 최초로 영어사전을 편찬한 새뮤얼 존슨은,
+      "우리에게는 알고 싶어하는 욕구가 있다. 
+    </p>
+    <p>
+      하나는 어떤 주제에 대해 '직접 아는 것'이고, 
+      다른 하나는 '관련 정보가 어디 있는지를 아는 것'이다.
+      "라고 말했습니다.
+    </p>
+  </div>
+  <button type="button" class="btn_close"><span class="blind">닫기</span></button>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Jquery lib */ 
+$(function() {
+  // popup open event
+  $(".btn_open").on('click', function(event) {
+    $(".popup").show();
+    
+    // area hidden 처리
+    $("#wrap").hide();
+    setTimeout(function() {
+			$(".popup").attr({"aria-hidden":"false", "tabindex": "1"}).focus();
+    }, 500);
+    event.stopPropagation();
+  }); 
+  
+  // popup close event
+  $('.btn_close').on('click', function(event) {
+    $('.popup').hide();
+		$("#wrap").show();
+		$(".popup").attr({"aria-hidden":"true", "tabindex": "-1"}).blur();
+    event.stopPropagation();
+  });
+});
+    </script>
+
+</body>
+</html>
