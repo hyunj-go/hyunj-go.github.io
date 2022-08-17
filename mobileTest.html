@@ -12,9 +12,9 @@
 <body>
 <div class="wrap">
 	<p>testestestestestestes</p>
-	<div class="btn-area">
+	
     		<button class="btn btn-copy" onclick="copyToClipboard(this); $event.target.focus();"><span>Copy Address</span></button>
-	</div>
+	
    	<button class="btn2" onclick="buttonfn();">버튼2</button>
 	<br><br>
    	<div>
@@ -31,11 +31,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        function copyToClipboard(copyBtn){
+        function copyToClipboard(){
 	
             	if(!alert("복사되었습니다.")){
 			setTimeout(function(){
-			    $(copyBtn).parent('.btn-area').attr("tabindex", "0").focus();
+			    $('.btn-copy').focus();
 			},400);
 		}
         }
