@@ -19,6 +19,9 @@
             textexttextexttextexttextexttextexttextext
         </div>
     </div>
+	
+	<br><br>
+	<button class="top">top</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -40,8 +43,14 @@
             $('.showbox').show(0,function(){
 	    	$('.showbox').attr('tabindex', 0).focus();
 	    });
-            
-        })
+        });
+	    
+	$('.top').click(function(){
+		$('#mainWrap').scrollTop(0);
+		setTimeout(function(){
+			$('.btn2').focus();
+            }, 100);
+	});
     </script>
 </body>
 </html>
