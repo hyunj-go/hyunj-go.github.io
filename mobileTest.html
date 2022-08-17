@@ -11,11 +11,11 @@
 </head>
 <body>
 <div class="wrap">
-	<p>testte</p>
+	<p>test777</p>
 	
     		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
-   	<button class="btn2" onclick="buttonfn();">버튼2</button>
+   	<button class="btn2" onclick="buttonfn(this);">버튼2</button>
 	<br><br>
    	<div>
         	<button class="btn-show" onclick="showfocus()">show</button>
@@ -36,7 +36,7 @@
             	alert("복사되었습니다.");
                     setTimeout(function(){
                         document.getElementById("copy").focus();
-			    $('.p').text('asdfasdf');
+			    $('p').text('asdfasdf');
                     },1000)
                 
                 //copyBtn.focus();
@@ -48,8 +48,13 @@ return false;
 		
         }
 
-        function buttonfn() {
-            alert("alert.")
+        function buttonfn(btn) {
+            alert("alert.",function(){
+		 setTimeout(function(){
+                        btn.focusin();
+                 },1000)
+	    });
+		 
         }
 
 //         $('.btn-show').click(function(){
