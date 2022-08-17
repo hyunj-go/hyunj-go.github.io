@@ -6,27 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .showbox {display:none;}
     </style>
 </head>
 <body>
     <button class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></button>
     <button class="btn2" onclick="buttonfn();">버튼2</button>
+<br><br>
+    <div>
+        <button class="btn-show">show</button>
+        <div class="showbox">
+            textexttextexttextexttextexttextexttextext
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function copyToClipboard(copyBtn){
 	
-            	alert("복사되었습니다.");
-		console.log('asdfad');
-                setTimeout(function(){
+            if(!alert("복사되었습니다.")){ console.log('asdf');
+                //setTimeout(function(){
                     copyBtn.focus();
-                },100);
+                //},1);
+            }
             
         }
 
         function buttonfn() {
             alert("alert.")
         }
+
+        $('.btn-show').click(function(){
+            $('.showbox').show();
+            $('.showbox').tabindex(0).focus();
+        })
     </script>
 </body>
 </html>
