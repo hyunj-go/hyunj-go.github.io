@@ -11,9 +11,9 @@
 </head>
 <body>
 <div class="wrap">
-	<p>testtest</p>
+	<p>testtesttest</p>
 	
-    		<button class="btn btn-copy" onclick="copyToClipboard();"><span>Copy Address</span></button>
+    		<button class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></button>
 	
    	<button class="btn2" onclick="buttonfn();">버튼2</button>
 	<br><br>
@@ -31,14 +31,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        function copyToClipboard(){
+        function copyToClipboard(copyBtn){
 	
             	if(!alert("복사되었습니다.")){
 			setTimeout(function(){copyBtn.focus();return;}, 1);
 		
 		}
-		setTimeout(function(){copyBtn.focus();}, 1);
-		return false;
 			
 		
         }
