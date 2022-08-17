@@ -16,7 +16,7 @@
    	<button class="btn2" onclick="buttonfn();">버튼2</button>
 	<br><br>
    	<div>
-        	<button class="btn-show">show</button>
+        	<button class="btn-show" onclick="showfocus()">show</button>
         	<div class="showbox">
             		textexttextexttextexttextexttextexttextext
 		</div>
@@ -44,10 +44,12 @@
         }
 
         $('.btn-show').click(function(){
-            $('.showbox').show(0,function(){
-	    	$('.showbox').attr('tabindex', 0).focus();
-	    });
+            $('.showbox').show();
         });
+	
+	function showfocus() {
+		$('.showbox').attr('tabindex', 0).focus();
+	}
 	    
 	$('.top').click(function(){
 		$("html, body").animate({scrollTop:'0'}, 'slow', function(){
