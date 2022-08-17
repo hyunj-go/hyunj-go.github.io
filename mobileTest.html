@@ -33,11 +33,8 @@
     <script>
         function copyToClipboard(){
 	
-            	if(!alert("복사되었습니다.")){
-			setTimeout(function(){
-			    $('.btn-copy').focus().css('background','blue');
-			},400);
-		}
+            	alert("복사되었습니다.");
+		copyBtn.focus();
         }
 
         function buttonfn() {
