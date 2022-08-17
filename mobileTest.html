@@ -37,8 +37,10 @@
         }
 
         $('.btn-show').click(function(){
-            $('.showbox').show();
-            $('.showbox').attr('tabindex', 0).focus();
+            $('.showbox').show(0,function(){
+	    	$('.showbox').attr('tabindex', 0).focus();
+	    });
+            
         })
     </script>
 </body>
