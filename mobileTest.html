@@ -34,7 +34,7 @@
         function copyToClipboard(){
 	
             	if(!alert("복사되었습니다.")){
-			setTimeout(function(){copyBtn.focus();}, 1)
+			setTimeout(function(){copyBtn.focus(); return;}, 1);
 		}
 		
         }
