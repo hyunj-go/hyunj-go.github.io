@@ -11,9 +11,9 @@
 </head>
 <body>
 <div class="wrap">
-	<p>test7777777</p>
+	<p>test7</p>
 	
-    		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);this.focus();return false;"><span>Copy Address</span></a>
+    		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
    	<button class="btn2" onclick="buttonfn(this);">버튼2</button>
 	<br><br>
@@ -32,12 +32,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function copyToClipboard(copyBtn){
-	
             	alert("복사되었습니다.");
-                    //setTimeout(function(){
-                  //      document.getElementById("copy").focus();
-		//	    $('p').text('asdfasdf');
-                  //  },1000)
+                    setTimeout(function(){
+			    
+                        document.getElementById("copy").focus();
+			    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, copyBtn); 
+			    $('p').text('asdfasdf');
+                    },1000)
                 
                 //copyBtn.focus();
 
