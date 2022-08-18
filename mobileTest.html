@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="wrap">
-	<p>test7</p>
+	<p>test789</p>
 	
     		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
@@ -84,14 +84,11 @@ return false;
 		
 	});
 	    
-	    $("body").keydown(function(e){
-		if( e.key == "Tab" ){
-			if($('.showbox').length){
-				 if( $('.showbox').is(e.target) ){
-				     $('.btn2').focus();
-				 }
-			}
-		}
+	    $(window).swipe(function(e){
+			
+			 if( $('.showbox').is(e.target) ){
+			     $('.btn2').focus();
+			 }
     	});
     </script>
 </div>
