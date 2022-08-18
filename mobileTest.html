@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="wrap">
-	<p>test7</p>
+	<p>test789</p>
 	
     		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
@@ -35,8 +35,7 @@
             	alert("복사되었습니다.");
                     setTimeout(function(){
 			    
-                        document.getElementById("copy").focus();
-			    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, copyBtn); 
+                        document.getElementById("copy").focus(); 
 			    $('p').text('asdfasdf');
                     },1000)
                 
@@ -48,6 +47,18 @@ return false;
 			
 		
         }
+	    
+	    $('.btn-copy').on('keyup', function(e) {
+		if (e.keyCode === 13) 
+		{
+		    e.preventDefault();
+			setTimeout(function(){
+				document.getElementById("copy").focus();
+			    },1000)
+		    return false;
+			
+		}
+	    });
 
         function buttonfn(btn) {
             if(!alert("복사되었습니다.")){
