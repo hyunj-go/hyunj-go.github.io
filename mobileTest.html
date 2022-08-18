@@ -83,6 +83,16 @@ return false;
 		});
 		
 	});
+	    
+	    $("body").keydown(function(e){
+		if( e.key == "Tab" ){
+			if($('.showbox').length){
+				 if( $('.showbox').is(e.target) ){
+				     $('.top').focus();
+				 }
+			}
+		}
+    	});
     </script>
 </div>
 </body>
