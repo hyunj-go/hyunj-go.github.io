@@ -49,11 +49,14 @@ return false;
         }
 
         function buttonfn(btn) {
-            alert("alert.",function(){
-		 setTimeout(function(){
-                        btn.focusin();
-                 },1000)
+            $.alert({
+	      title: 'Alert!',
+	      content: 'Please enter item name',
+	      onDestroy: function() {
+		btn.focus();
+	      }
 	    });
+	    return false;
 		 
         }
 
