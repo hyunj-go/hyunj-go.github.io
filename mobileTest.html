@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="wrap">
-	<p>test777</p>
+	<p>test77777</p>
 	
     		<a href="javascript:void(0)" role="button" id="copy" class="btn btn-copy" onclick="copyToClipboard(this);"><span>Copy Address</span></a>
 	
@@ -49,13 +49,13 @@ return false;
         }
 
         function buttonfn(btn) {
-            $.alert({
-	      title: 'Alert!',
-	      content: 'Please enter item name',
-	      onDestroy: function() {
-		btn.focus();
-	      }
-	    });
+            if(!alert("복사되었습니다.")){
+		    setTimeout(function(){
+                        document.getElementById("copy").focus();
+			    $('p').text('asdfasdf');
+                    },1000)
+	    }
+                    
 	    return false;
 		 
         }
