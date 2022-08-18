@@ -83,10 +83,14 @@ return false;
 		});
 		
 	});
-	 $('.showbox').on('focus',function(){ console.log('focus');
+// 	 $('.showbox').on('focus',function(){ console.log('focus');
 		 
-			$('.btn2').focus();console.log('focus!');
-	 });
+// 			$('.btn2').focus();console.log('focus!');
+// 	 });
+	    
+	    if ($('.showbox').is(":focus")) {
+		    $('.btn2').focus();console.log('focus!');
+	    }
 	    
     </script>
 </div>
