@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="wrap">
-    <p>test</p>
+    <p>testtttt</p>
     <div class="sub-title-area">
 				<h3>LOCATION</h3>
 				<p id="txAddress">서울특별시 1234567</p>
@@ -26,28 +26,36 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    function copycopy(element, copyBtn){
-	    var copied = false; console.log('false');
-	    
-	    return function() {console.log('return');
-		    if(!copied){console.log('true');
-			    copied = true;
-		  
-		    
-		      var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
-		      $("body").append($temp);
-		      $temp.val($('#'+element).text()).select();
-		      document.execCommand("copy");
-		      $temp.remove();
-
-		      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료</span>');
-		      setTimeout(function(){
-			$('.copy-alert').remove();
-		      },5000);
+    var copycopy = (function(){
+	var copied = false; console.log(copied);
+	return function(element, copyBtn) {
+		if(!copied){
+			copied = true;console.log(copied);
+			
+			var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
+			$("body").append($temp);
+			$temp.val($('#'+element).text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+			
+			if($(copyBtn).siblings('.copy-alert').length){
+				$('.copy-alert').remove();
+			}
+			$(copyBtn).after('<span class="copy-alert" role="alert">복사되었습니다.</span>');
+			setTimeout(function(){
+				$('.copy-alert').remove();
+				copied = false; console.log(copied);
+			},5000);
 			$(copyBtn).focus();
-	      }
-	    }
-    }
+			
+		//	if(!alert("복사되었습니다.")){ 
+		//		setTimeout(function(){
+		//			copyBtn.focus();
+		//		},1);
+		//	}
+		}
+	}
+})();
 
   </script>
 </body>
