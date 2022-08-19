@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <p>test</p>
+    <div class="sub-title-area">
+				<h3>LOCATION</h3>
+				<p id="txAddress">서울특별시 1234567</p>
+				<button class="btn btn-copy" onclick="copycopy('txAddress', this);"><span>Copy Address</span></button>
+			</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function copycopy(element, copyBtn){
+      var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
+      $("body").append($temp);
+      $temp.val($('#'+element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+
+      if($(copyBtn).siblings('.copy-alert').length){
+        $('.copy-alert').remove();
+      }
+      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료<button type="button" class="hidden copy-alert-close">닫기</button></span>');
+
+      setTimeout(function(){
+        $('.copy-alert').remove();
+        $(copyBtn).focus();
+      },5000);
+      $('.copy-alert-close').on('click', function(){
+        $('.copy-alert').remove();
+        $(copyBtn).focus();
+      });
+
+    }
+
+  </script>
+</body>
+</html>
