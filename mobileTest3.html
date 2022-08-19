@@ -41,7 +41,7 @@
 			if($(copyBtn).siblings('.copy-alert').length){
 				$('.copy-alert').remove();
 			}
-			$(copyBtn).after('<span class="copy-alert" role="alert">복사되었습니다.</span>');
+			$(copyBtn).after('<span class="copy-alert" aria-live="polite">복사되었습니다.</span>');
 			setTimeout(function(){
 				$('.copy-alert').remove();
 				copied = false; console.log(copied);
