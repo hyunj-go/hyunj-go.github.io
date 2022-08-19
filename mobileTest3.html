@@ -27,10 +27,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     function copycopy(element, copyBtn){
-	    var copied = false;
+	    var copied = false; console.log('false');
 	    
-	    return function() {
-		    if(!copied){
+	    return function() {console.log('return');
+		    if(!copied){console.log('true');
 			    copied = true;
 		  
 		    
