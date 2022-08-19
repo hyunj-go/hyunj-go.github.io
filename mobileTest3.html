@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="wrap">
-    <p>test</p>
+    <p>testtest</p>
     <div class="sub-title-area">
 				<h3>LOCATION</h3>
 				<p id="txAddress">서울특별시 1234567</p>
@@ -26,12 +26,8 @@
       $temp.val($('#'+element).text()).select();
       document.execCommand("copy");
       $temp.remove();
-
-      if($(copyBtn).siblings('.copy-alert').length){
-        $('.copy-alert').remove();
-      }
+	    
       $(copyBtn).after('<span class="copy-alert" role="alert">복사완료</span>');
-
       setTimeout(function(){
         $('.copy-alert').remove();
         $(copyBtn).focus();
