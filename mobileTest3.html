@@ -17,6 +17,12 @@
 				<p id="txAddress">서울특별시 1234567</p>
 				<button class="btn btn-copy" onclick="copycopy('txAddress', this);"><span>Copy Address</span></button>
 			</div>
+	  
+	  <p>asdfasdf</p>
+	  
+	  <div>
+		  <p>asdfasdfdfdfdfsdfsdfsdf</p>
+	  </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -27,11 +33,11 @@
       document.execCommand("copy");
       $temp.remove();
 	    
-      $(copyBtn).after('<span class="copy-alert" role="alert">복사완료</span>');
+      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료</span>');
       setTimeout(function(){
         $('.copy-alert').remove();
-        $(copyBtn).focus();
       },5000);
+	$(copyBtn).focus();
 
     }
 
