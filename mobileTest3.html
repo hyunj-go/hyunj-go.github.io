@@ -30,16 +30,12 @@
       if($(copyBtn).siblings('.copy-alert').length){
         $('.copy-alert').remove();
       }
-      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료<button type="button" class="hidden copy-alert-close">닫기</button></span>');
+      $(copyBtn).after('<span class="copy-alert" role="alert">복사완료</span>');
 
       setTimeout(function(){
         $('.copy-alert').remove();
         $(copyBtn).focus();
       },5000);
-      $('.copy-alert-close').on('click', function(){
-        $('.copy-alert').remove();
-        $(copyBtn).focus();
-      });
 
     }
 
