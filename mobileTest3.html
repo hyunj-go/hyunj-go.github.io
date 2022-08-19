@@ -27,23 +27,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     function copycopy(element, copyBtn){
-	    var timer;
-	    if(timer) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function() {
-              var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
-	      $("body").append($temp);
-	      $temp.val($('#'+element).text()).select();
-	      document.execCommand("copy");
-	      $temp.remove();
+	    var copied = false;
+	    
+	    return function() {
+		    if(!copied){
+			    copied = true;
+		  
+		    
+		      var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
+		      $("body").append($temp);
+		      $temp.val($('#'+element).text()).select();
+		      document.execCommand("copy");
+		      $temp.remove();
 
-	      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료</span>');
-	      setTimeout(function(){
-		$('.copy-alert').remove();
-	      },5000);
-		$(copyBtn).focus();
-            }, 200);
+		      $(copyBtn).after('<span class="copy-alert" aria-live="polite">복사완료</span>');
+		      setTimeout(function(){
+			$('.copy-alert').remove();
+		      },5000);
+			$(copyBtn).focus();
+	      }
+	    }
     }
 
   </script>
