@@ -7,127 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B.Ready :: template</title>
     <style>
-        @import url('styles/tempforTest/styles-m.css');
-@import url('styles/tempforTest/styles-l.css') only screen and (min-width: 768px);
-.display-flex-cs {
-  display: flex;
-  display: -webkit-flex;
-}
-/*_typography*/
-/*soehne*/
-@font-face {
-  font-family: 'soehne';
-  src: url('../fonts/soehne/soehne-buch.woff2') format('woff2'), url('../fonts/soehne/soehne-buch.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'soehne';
-  src: url('../fonts/soehne/soehne-kraftig.woff2') format('woff2'), url('../fonts/soehne/soehne-Kräftig.otf') format('otf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'soehne';
-  src: url('../fonts/soehne/soehne-halbfett.woff2') format('woff2'), url('../fonts/soehne/soehne-halbfett.otf') format('otf');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-/*soehneBreit*/
-@font-face {
-  font-family: 'soehneBreit';
-  src: url('../fonts/soehne-breit/soehne-breit-buch.woff2') format('woff2'), url('../fonts/soehne-breit/soehne-breit-buch.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'soehneBreit';
-  src: url('../fonts/soehne-breit/soehne-breit-kraftig.woff2') format('woff2'), url('../fonts/soehne-breit/soehne-breit-kraftig.otf') format('otf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'soehneBreit';
-  src: url('../fonts/soehne-breit/soehne-breit-halbfett.woff2') format('woff2'), url('../fonts/soehne-breit/soehne-breit-halbfett.otf') format('otf');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'soehneBreit';
-  src: url('../fonts/soehne-breit/soehne-breit-dreiviertelfett.woff2') format('woff2'), url('../fonts/soehne-breit/soehne-breit-dreiviertelfett.otf') format('otf');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/*notosansKr*/
-@font-face {
-  font-family: 'NotoSansKr';
-  src: url('../fonts/NotoSansKr/noto-sans-kr-Thin.eot');
-  src: local('Noto Sans KR'), url('../fonts/NotoSansKr/noto-sans-kr-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSansKr/noto-sans-kr-Thin.woff2') format('woff2'), url('../fonts/NotoSansKr/noto-sans-kr-Thin.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NotoSansKr';
-  src: url('../fonts/NotoSansKr/noto-sans-kr-regular.eot');
-  src: local('Noto Sans KR'), url('../fonts/NotoSansKr/noto-sans-kr-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSansKr/noto-sans-kr-regular.woff2') format('woff2'), url('../fonts/NotoSansKr/noto-sans-kr-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NotoSansKr';
-  src: url('../fonts/NotoSansKr/noto-sans-kr-500.eot');
-  src: local('Noto Sans KR'), url('../fonts/NotoSansKr/noto-sans-kr-500.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSansKr/noto-sans-kr-500.woff2') format('woff2'), url('../fonts/NotoSansKr/noto-sans-kr-500.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'NotoSansKr';
-  src: url('../fonts/NotoSansKr/noto-sans-kr-700.eot');
-  src: local('Noto Sans KR'), url('../fonts/NotoSansKr/noto-sans-kr-700.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSansKr/noto-sans-kr-700.woff2') format('woff2'), url('../fonts/NotoSansKr/noto-sans-kr-700.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/*Roboto*/
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Roboto/roboto-400.eot');
-  src: local('Roboto'), url('../fonts/Roboto/roboto-400.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/roboto-400.woff2') format('woff2'), url('../fonts/Roboto/roboto-400.woff') format('woff'), url('../fonts/Roboto/roboto-400.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/Roboto/roboto-500.eot');
-  src: local('Roboto'), url('../fonts/Roboto/roboto-500.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/roboto-500.woff2') format('woff2'), url('../fonts/Roboto/roboto-500.woff') format('woff'), url('../fonts/Roboto/roboto-500.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/Roboto/roboto-700.eot');
-  src: local('Roboto'), url('../fonts/Roboto/roboto-700.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/roboto-700.woff2') format('woff2'), url('../fonts/Roboto/roboto-700.woff') format('woff'), url('../fonts/Roboto/roboto-700.ttf') format('truetype');
-}
-/* porto-new-icons */
-@font-face {
-  font-family: 'porto-new-icons';
-  src: url('../fonts/portoIcon/porto-icons.woff2') format('woff2'), url('../fonts/portoIcon/porto-icons.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+        
 .items {
   margin: 0;
   padding: 0;
@@ -13546,7 +13426,7 @@ div.breadcrumbs .items li a {
   }
   .page-header .nav-sections .nav-sections-item-content {
     margin-top: 104px;
-    max-height: calc(100vh - 134px);
+/*     max-height: calc(100vh - 134px); */
     overflow-y: auto;
   }
   .page-header .nav-sections .nav-sections-item-content:not([id*='menu']) {
