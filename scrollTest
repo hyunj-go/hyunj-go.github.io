@@ -6,23 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B.Ready :: template</title>
-    <link rel="stylesheet" href="https://mcstaging.beready.co.kr/static/version1668744958/_cache/merged/e92a5489331299de55e9fe18adb1e6fa.min.css">
-    <link rel="stylesheet" type="text/css" media="print"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/static/version1663560868/frontend/BeReady/kr/ko_KR/css/print.min.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/web/bootstrap/css/bootstrap.optimized.min.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/web/css/animate.optimized.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/web/css/header/type3.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/web/css/custom.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/web/css/custom-styles.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/configed_css/design_be_ready_kr_storeview.css">
-    <link rel="stylesheet" type="text/css" media="all"
-        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/configed_css/settings_be_ready_kr_storeview.css">
+    
 </head>
 
 <body data-container="body" id="html-body" class="cms-home layout-fullwidth wide mobile-sticky cms-index-index page-layout-1column">
