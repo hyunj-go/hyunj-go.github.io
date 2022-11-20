@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="ko" class="nav-before-open nav-open">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Ready :: template</title>
+    <style>
+        
+
+/*Magento_Theme_extends*/
+body,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: 'NotoSansKr', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+button,
+button:not(.primary) {
+  border: 0;
+  line-height: 1;
+  padding: 0;
+  height: auto;
+  background-color: transparent;
+}
+button span,
+button:not(.primary) span {
+  font-weight: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+select,
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type*=date],
+input[type=email] {
+  font-family: 'NotoSansKr', sans-serif;
+  padding: 12px 16px;
+  border: 1px solid #3A4055;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A1A1A;
+  line-height: 1.3;
+  height: auto;
+}
+select::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=url]::placeholder,
+input[type=tel]::placeholder,
+input[type=search]::placeholder,
+input[type=number]::placeholder,
+input[type*=date]::placeholder,
+input[type=email]::placeholder {
+  color: #666;
+}
+select.mage-error,
+input[type=text].mage-error,
+input[type=password].mage-error,
+input[type=url].mage-error,
+input[type=tel].mage-error,
+input[type=search].mage-error,
+input[type=number].mage-error,
+input[type*=date].mage-error,
+input[type=email].mage-error {
+  border-color: #ed8380;
+}
+textarea {
+  font-family: 'NotoSansKr', sans-serif;
+  padding: 12px 16px;
+}
+._keyfocus *:focus,
+input:not([disabled]):focus,
+textarea:not([disabled]):focus,
+select:not([disabled]):focus {
+  box-shadow: 0 0 2px 1px #0033C3;
+}
+._keyfocus *:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+.events-details-index div.text-overlay {
+  z-index: 1;
+}
+#newsletter_popup form {
+  display: none;
+}
+#newsletter_popup input[type="checkbox"] {
+  top: -2px;
+}
+div.breadcrumbs {
+  display: none;
+}
+div.breadcrumbs .item[class*="category"] > a {
+  line-height: normal;
+}
+div.breadcrumbs strong {
+  vertical-align: middle;
+  line-height: normal;
+}
+div.breadcrumbs .items {
+  font-size: 13px;
+}
+div.breadcrumbs .items li a {
+  text-decoration: none;
+  font-weight: 400;
+}
+.hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  font-size: 0;
+}
+.block-static-block.widget {
+  margin-bottom: 0;
+}
+.cms-home .page-title {
+  display: none !important;
+}
+@media only screen and (min-width: 768px) {
+  .pagebuilder-mobile-only {
+    display: none !important;
+  }
+  a:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+  }
+  button,
+  a[class*="btn-"],
+  .cart .action-delete {
+    overflow: hidden;
+  }
+  button > span,
+  a[class*="btn-"] > span,
+  .cart .action-delete > span {
+    display: inline-block;
+    transition: translateY 0.15s;
+  }
+  button:hover,
+  a[class*="btn-"]:hover,
+  .cart .action-delete:hover {
+    text-decoration: none !important;
+  }
+  button:hover span,
+  a[class*="btn-"]:hover span,
+  .cart .action-delete:hover span {
+    -webkit-animation-name: button-hover;
+    animation-name: button-hover;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: cubic-bezier(0.41, 0.22, 0, 1.15);
+    animation-timing-function: cubic-bezier(0.41, 0.22, 0, 1.15);
+  }
+  body .columns .column.main {
+    transition: none;
+  }
+  body:not(.cms-home) .page-wrapper .page-main {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    border-right: 1px solid #3A4055;
+    border-left: 1px solid #3A4055;
+  }
+}
+@media not screen and (min-width: 768px) {
+  .pagebuilder-mobile-hidden {
+    display: none !important;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+/* button-hover */
+@-webkit-keyframes button-hover {
+  to {
+    -webkit-transform: translateY(34px);
+    transform: translateY(34px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-32px);
+    transform: translateY(-32px);
+  }
+  51% {
+    -webkit-transform: translateY(34px);
+    transform: translateY(34px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes button-hover {
+  to {
+    -webkit-transform: translateY(34px);
+    transform: translateY(34px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-32px);
+    transform: translateY(-32px);
+  }
+  51% {
+    -webkit-transform: translateY(34px);
+    transform: translateY(34px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* button-hover-lg */
+@-webkit-keyframes button-hover-lg {
+  to {
+    -webkit-transform: translateY(38px);
+    transform: translateY(38px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-36px);
+    transform: translateY(-36px);
+  }
+  51% {
+    -webkit-transform: translateY(37px);
+    transform: translateY(37px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes button-hover-lg {
+  to {
+    -webkit-transform: translateY(38px);
+    transform: translateY(38px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-36px);
+    transform: translateY(-36px);
+  }
+  51% {
+    -webkit-transform: translateY(36px);
+    transform: translateY(36px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* button-hover-xl */
+@-webkit-keyframes button-hover-xl {
+  to {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-58px);
+    transform: translateY(-58px);
+  }
+  51% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes button-hover-xl {
+  to {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-58px);
+    transform: translateY(-58px);
+  }
+  51% {
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* button-hover-xxl */
+@-webkit-keyframes button-hover-xxl {
+  to {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-88px);
+    transform: translateY(-88px);
+  }
+  51% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes button-hover-xxl {
+  to {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+  }
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  49% {
+    -webkit-transform: translateY(-88px);
+    transform: translateY(-88px);
+  }
+  51% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.mobile-sticky header.page-header {
+  box-shadow: none;
+  top: 30px;
+}
+.page-wrapper .page-header {
+  background-color: #fff !important;
+  border-bottom: 1px solid #3A4055 !important;
+  top: 30px;
+  z-index: 500;
+}
+.page-wrapper .page-header .header.content {
+  padding: 0;
+  max-width: none;
+}
+.page-wrapper .page-header .header.content .logo {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 16px 0 15px 16px;
+  box-sizing: content-box;
+}
+.page-wrapper .page-header .header.content .panel.header {
+  padding: 0;
+  z-index: 500;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .nav-toggle {
+  margin: 0;
+  padding: 16px;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .nav-toggle::before {
+  content: '';
+  width: 20px;
+  height: 16px;
+  background: url('../images/ico_menu_mo.png') no-repeat;
+  background-size: 100% auto;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  margin-top: 48px;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area > a {
+  display: none;
+  white-space: nowrap;
+  font-family: 'soehne', 'NotoSansKr', sans-serif;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area .my-account {
+  display: none;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label {
+  margin: 0;
+  position: absolute;
+  top: -48px;
+  right: calc(-100vw - 52px);
+  transition: right 0.3s;
+  padding: 13px 11px 13px 11px;
+  border-left: 1px solid #3A4055;
+  border-right: 1px solid #3A4055;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label > span {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  width: auto;
+  position: static;
+  font-size: 14px;
+  color: #000;
+  line-height: 22px;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label::before {
+  content: none;
+}
+.page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .control .search-category {
+  display: none;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel {
+  position: absolute;
+  top: 0;
+  right: 52px;
+  display: flex;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .custom-block .custom-header-menu {
+  display: inline-block;
+  padding: 13px 19px;
+  border-left: 1px solid #3A4055;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #1A1A1A;
+  font-family: 'soehne', 'NotoSansKr', sans-serif;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper {
+  padding: 13px 0;
+  min-width: 82px;
+  border-right: 1px solid #3A4055;
+  border-left: 1px solid #3A4055;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a1a1a;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart::before {
+  content: none;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .text {
+  font-family: 'soehne', 'NotoSansKr', sans-serif;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  position: static;
+  width: auto;
+  font-size: 14px;
+  color: #000;
+  line-height: 22px;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .counter.qty {
+  height: auto;
+  width: auto;
+  line-height: 1;
+  border-radius: 0;
+  margin: 0;
+  min-width: auto;
+  padding: 0;
+  position: static;
+  color: #0033C3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .counter.qty .counter-number {
+  font-family: 'soehne', 'NotoSansKr', sans-serif;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart {
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px !important;
+  padding: 12px 0 14px;
+  width: 194px;
+  right: 0;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart:after {
+  content: none;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart:before {
+  border: 0;
+  width: 8px;
+  height: 6px;
+  background: url(../images/ico_minicart_arrow.png) no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: -6px;
+  right: 23px;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart .subtitle.empty {
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 6px;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart .empty-msg p {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #000;
+  text-align: center;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart .empty-msg-link {
+  color: #0033C3 !important;
+  font-weight: 500;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart .minicart-widgets {
+  margin: 0;
+}
+.page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .block-minicart .action.close {
+  display: none;
+}
+.page-wrapper .page-main,
+.page-wrapper .page-main-full-width {
+  max-width: none;
+  padding: 79px 0 0;
+}
+.page-wrapper .page-main .page-top .page-title,
+.page-wrapper .page-main-full-width .page-top .page-title {
+  text-align: center;
+  border-bottom: 1px solid #3A4055;
+  padding: 2px 0;
+  position: fixed;
+  top: 79px;
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+}
+.page-wrapper .page-main .page-top .page-title .btn-back,
+.page-wrapper .page-main-full-width .page-top .page-title .btn-back {
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: url('../images/button_title_back.png') no-repeat;
+  background-size: 100% auto;
+}
+.page-wrapper .page-main .page-top .page-title > span,
+.page-wrapper .page-main-full-width .page-top .page-title > span {
+  margin-left: -44px;
+  line-height: 44px;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+@media only screen and (min-width: 768px) {
+  .page-wrapper .page-header {
+    top: 0 !important;
+  }
+  .page-wrapper .page-header.sticky-header {
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .page-wrapper .page-header.sticky-header .nav-sections {
+    position: static !important;
+    background-color: #fff !important;
+    padding: 0;
+    z-index: 500 !important;
+  }
+  .page-wrapper .page-header.sticky-header .panel.header .bottom-panel .minicart-wrapper {
+    position: static;
+    right: 0;
+    top: 0;
+    margin: 0;
+  }
+  .page-wrapper .page-header.sticky-header ~ .page-main,
+  .page-wrapper .page-header.sticky-header ~ .page-main-full-width {
+    padding-top: 81px;
+  }
+  .page-wrapper .page-header.sticky-header ~ .page-main .page-top .page-title,
+  .page-wrapper .page-header.sticky-header ~ .page-main-full-width .page-top .page-title {
+    max-width: 1200px;
+  }
+  .page-wrapper .page-header .header.content {
+    padding: 0;
+  }
+  .page-wrapper .page-header .header.content .logo {
+    width: 110px;
+    height: auto;
+    margin: 0;
+    box-sizing: content-box;
+    padding: 16px 0 16px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .page-wrapper .page-header .header.content .nav-sections {
+    margin: 0;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .nav-close {
+    display: none;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .nav-my-account {
+    display: none;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation {
+    text-align: center;
+    padding: 0;
+    max-width: none !important;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation > ul {
+    display: flex;
+    justify-content: center;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item {
+    margin: 0;
+    padding: 5px 0;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item:hover::after {
+    content: none;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item:hover > a > span {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item .level-top {
+    padding: 10px 12px;
+    line-height: 1;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item .level-top span {
+    font-size: 15px;
+    color: #111;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item + .ui-menu-item {
+    margin-left: 10px;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item:hover .level-top {
+    background-color: transparent;
+  }
+  .page-wrapper .page-header .header.content .nav-sections .navigation .ui-menu-item.active .level-top {
+    background-color: #fff;
+  }
+  .page-wrapper .page-header .header.content .panel.header {
+    top: 0;
+    margin: 0;
+    max-width: none;
+    line-height: 1;
+    font-size: 0;
+    width: auto;
+    z-index: 500;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel {
+    margin: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .header.links {
+    margin: 0 50px 0 15px;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .header.links li > a {
+    color: #454E57;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 16px;
+    display: inline-block;
+    border: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .header.links li > a span {
+    color: #454E57;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .header.links li + li {
+    margin-left: 6px;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .header.links li.my-account:first-child > a {
+    padding: 16px 0;
+    max-width: 68px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 50px;
+    word-break: break-word;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 323px;
+    padding-left: 0;
+    border-left: 1px solid #3A4055;
+    border-right: 0;
+    z-index: 500;
+    margin-top: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area > a {
+    display: block;
+    font-size: 15px;
+    color: #111;
+    padding: 14px 22px 14px;
+    line-height: 22px;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .my-account {
+    display: none;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    right: auto;
+    left: 0;
+    top: 80px;
+    max-width: none;
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #3A4055;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label {
+    margin: -1px;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label > span {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    width: 1px;
+    position: absolute;
+    font-size: 0;
+    color: #fff;
+    line-height: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search::before {
+    content: none;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content {
+    padding: 40px 0;
+    background: #fff;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .field.search .control {
+    border-bottom: 2px solid #000;
+    padding-bottom: 12px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .field.search .control input {
+    border: 0;
+    border-radius: 0;
+    font-size: 17px;
+    line-height: 24px;
+    color: #999;
+    padding: 0;
+    height: auto;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .field.search .control input:focus {
+    box-shadow: none;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .field.search .control .btn-clear-search {
+    width: 40px;
+    height: 40px;
+    background: url(../images/button_searchclose_pc.png) no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 32px;
+    right: 50%;
+    transform: translateX(300px);
+    border: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .block-content .actions {
+    display: none !important;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .btn-close-search {
+    width: 40px;
+    height: 40px;
+    background: url('../images/button_searchclose_pc.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 39px;
+    right: 39px;
+    border: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel {
+    right: 219px;
+    display: block;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .switcher-currency {
+    display: none;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .custom-block {
+    display: none;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper {
+    min-width: 105px;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart {
+    padding: 14px 22px 14px;
+    margin: 0;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .text {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    position: static;
+    width: auto;
+    font-size: 15px;
+    color: #000;
+    line-height: 22px;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .counter.qty {
+    height: auto;
+    width: auto;
+    line-height: 1;
+    border-radius: 0;
+    margin: 0;
+    min-width: auto;
+    padding: 0;
+    position: static;
+    color: #0033C3;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .page-wrapper .page-header .header.content .panel.header .bottom-panel .minicart-wrapper .action.showcart .counter.qty .counter-label {
+    display: none;
+  }
+  .page-wrapper .page-main,
+  .page-wrapper .page-main-full-width {
+    padding-top: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .page-wrapper .page-main .page-top .page-title,
+  .page-wrapper .page-main-full-width .page-top .page-title {
+    position: static;
+    padding: 19px 0 20px;
+    overflow: hidden;
+  }
+  .page-wrapper .page-main .page-top .page-title .btn-back,
+  .page-wrapper .page-main-full-width .page-top .page-title .btn-back {
+    width: 51px;
+    height: 60px;
+    background: url('../images/button_title_back_pc.png') no-repeat;
+    background-size: 100% auto;
+  }
+  .page-wrapper .page-main .page-top .page-title > span,
+  .page-wrapper .page-main-full-width .page-top .page-title > span {
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 60px;
+  }
+}
+@media not screen and (min-width: 768px) {
+  .mobile-sticky .page-main {
+    margin-top: 0;
+  }
+  .mobile-sticky .page-header {
+    position: fixed;
+  }
+  .page-header .nav-sections {
+    transition: right 0.3s;
+    position: fixed;
+    left: auto;
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 30px);
+/*     overflow: hidden; */
+    background-color: #fff;
+    bottom: 0;
+    top: auto;
+    z-index: 500;
+  }
+  .page-header .nav-sections::before {
+    content: '';
+    display: inline-block;
+    width: 90px;
+    height: 15px;
+    background: url('../images/bready_logo_moNav.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 17px;
+    left: 16px;
+  }
+  .page-header .nav-sections .nav-close {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    line-height: 1;
+    border: 0;
+    background: transparent;
+    transform: rotate(45deg);
+    z-index: 10;
+  }
+  .page-header .nav-sections .nav-close::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background-color: #111;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+  }
+  .page-header .nav-sections .nav-close::after {
+    content: '';
+    width: 1.5px;
+    height: 24px;
+    background-color: #111;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .page-header .nav-sections .nav-my-account {
+    position: absolute;
+    top: 62px;
+    right: 21px;
+    height: 29px;
+    border: 1px solid #666;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px 11px;
+    z-index: 10;
+  }
+  .page-header .nav-sections .nav-my-account > span {
+    font-size: 13px;
+    color: #666;
+    line-height: 17px;
+    font-weight: 400;
+  }
+  .page-header .nav-sections .navigation {
+    margin-bottom: 66px;
+      height: calc(100vh - 268px);
+    overflow-y: auto;
+  }
+  .page-header .nav-sections .navigation .ui-menu-item {
+    border-bottom: 1px solid #3A4055;
+    border-top: 0;
+    margin: 0;
+  }
+  .page-header .nav-sections .navigation .ui-menu-item > a {
+    display: block;
+    padding: 8px 0 8px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0033C3 !important;
+    line-height: 38px;
+  }
+  .page-header .nav-sections .navigation .ui-menu-item > a:active {
+    background: #0033C3;
+    color: #fff !important;
+  }
+  .page-header .nav-sections .nav-sections-item-title {
+    display: none !important;
+  }
+  .page-header .nav-sections .nav-sections-item-content {
+    margin-top: 104px;
+/*     max-height: calc(100vh - 134px); */
+/*     overflow-y: auto; */
+  }
+  .page-header .nav-sections .nav-sections-item-content:not([id*='menu']) {
+    display: none !important;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links .authorization-link {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #F3F3F4;
+    border-top: 1px solid #3A4055;
+    border-bottom: 1px solid #3A4055;
+    margin: 0;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links .authorization-link > a {
+    display: block;
+    font-size: 18px;
+    color: #1A1A1A;
+    font-weight: 500;
+    line-height: 38px;
+    padding: 8px 0 8px 20px;
+    position: relative;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links .authorization-link > a::after {
+    content: '';
+    width: 24px;
+    height: 30px;
+    background: url('../images/button_arrow_right.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links .customer-name {
+    display: block;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #F3F3F4;
+    border-top: 1px solid #3A4055;
+    border-bottom: 1px solid #3A4055;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links .customer-name .logged-in {
+    display: block;
+    font-size: 18px;
+    color: #1A1A1A;
+    font-weight: 500;
+    line-height: 38px;
+    padding: 8px 0 8px 20px;
+    position: relative;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li > a:hover {
+    color: #1A1A1A !important;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li:not(.customer-name, .authorization-link) {
+    border-bottom: 0;
+    margin: 0;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li:not(.customer-name, .authorization-link) > a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 38px;
+    padding: 0 41px 0 0;
+    position: relative;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li:not(.customer-name, .authorization-link) > a::after {
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #CCC;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li:last-child > a {
+    padding-right: 0;
+  }
+  .page-header .nav-sections .nav-sections-item-content .header.links li:last-child > a::after {
+    content: none;
+  }
+  .page-header .panel.header .search-area .block-search .minisearch .label span {
+    font-family: 'soehne', 'NotoSansKr', sans-serif;
+  }
+  .page-header .panel.header .search-area .block-search .control {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #fff;
+    position: relative;
+  }
+  .page-header .panel.header .search-area .block-search .control .btn-clear-search {
+    display: none;
+  }
+  .page-header .panel.header .search-area .block-search .label.active + .control {
+    height: calc(100vh - 78px);
+  }
+  .page-header .panel.header .search-area .block-search .label.active + .control input {
+    margin: 0;
+    border: 0;
+    height: auto;
+    border-top: 1px solid #3A4055;
+    border-bottom: 1px solid #3A4055;
+    background: #F3F3F4;
+    color: #999;
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 400;
+    padding: 8px 20px;
+  }
+  .page-header .panel.header .search-area .block-search .label.active + .control .btn-clear-search {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: url('../images/button_searchclear_mo.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
+  .page-header .panel.header .search-area .block-search .label.active + .control .search-autocomplete {
+    margin-top: 0;
+    width: 100% !important;
+  }
+  .page-header .panel.header .search-area .block-search .btn-close-search {
+    display: none;
+    position: absolute;
+    top: -48px;
+    right: 0;
+    width: 52px;
+    height: 48px;
+    border: 0;
+    background: transparent;
+  }
+  .page-header .panel.header .search-area .block-search.show .btn-close-search {
+    display: block;
+  }
+  .nav-before-open {
+    height: 100%;
+    width: 100%;
+  }
+  .nav-before-open body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .nav-before-open .page-wrapper {
+    right: 0;
+    transition: right 0.3s;
+  }
+  .nav-open .page-wrapper {
+    left: auto !important;
+    right: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .nav-open .page-wrapper .page-header .nav-sections {
+    left: auto;
+    right: 0;
+    box-shadow: none;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+  }
+  .nav-open .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search .label {
+    right: 52px;
+  }
+}
+.footer .container {
+  max-width: none;
+}
+.footer .col-lg-12 {
+  padding: 0;
+}
+.bready-footer {
+  border-top: 1px solid #1A1A1A;
+}
+.bready-footer .footer-left-top {
+  padding: 10px 16px;
+  overflow: hidden;
+  background: #F3F3F4;
+}
+.bready-footer .footer-notice {
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.bready-footer .footer-notice .tit {
+  width: 73px;
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #0033C3;
+  font-weight: 700;
+  padding-right: 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+.bready-footer .footer-notice .tit::after {
+  content: '';
+  width: 1px;
+  height: 15px;
+  background: #ccc;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+}
+.bready-footer .footer-notice .footer-notice-list {
+  width: calc(100% - 73px);
+  position: absolute;
+  top: 0;
+  left: 73px;
+}
+.bready-footer .footer-notice .footer-notice-list > li {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bready-footer .footer-notice .footer-notice-list > li > a {
+  color: #666;
+}
+.bready-footer .footer-logo {
+  padding: 23px 0 23px 16px;
+  border-bottom: 1px solid #000;
+}
+.bready-footer .footer-logo > a {
+  display: inline-block;
+  width: 130px;
+  height: 21px;
+  background: url('../images/bready_logo_moFooter.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-menu {
+  margin-bottom: 24px;
+}
+.bready-footer .footer-menu li {
+  border-bottom: 1px solid #000;
+}
+.bready-footer .footer-menu li > a {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  padding: 9px 0 9px 16px;
+  position: relative;
+  white-space: nowrap;
+  font-family: 'soehne', 'NotoSansKr', sans-serif;
+}
+.bready-footer .footer-menu li > a::after {
+  content: '';
+  width: 24px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  background: url('../images/button_arrow_right_w_mo.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-share {
+  padding-left: 16px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.bready-footer .footer-share > li > a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.bready-footer .footer-share > li + li {
+  margin-left: 8px;
+}
+.bready-footer .footer-share .footer-share-item1 > a {
+  background: url('../images/ico_footer_instagram.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-share .footer-share-item2 > a {
+  background: url('../images/ico_footer_youtube.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-share .footer-share-item3 > a {
+  background: url('../images/ico_footer_facebook.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-share .footer-share-item4 > a {
+  background: url('../images/ico_footer_kakaotalk.png') no-repeat;
+  background-size: 100% auto;
+}
+.bready-footer .footer-info {
+  padding-left: 16px;
+  padding-bottom: 40px;
+}
+.bready-footer .footer-info .footer-link {
+  margin-bottom: 8px;
+}
+.bready-footer .footer-info .footer-link > a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.bready-footer .footer-info .footer-text .text {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.bready-footer .footer-info .footer-text .text span {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container {
+    max-width: none;
+  }
+  .bready-footer .inner-wrap {
+    display: flex;
+  }
+  .bready-footer .inner-wrap .footer-left {
+    width: 50%;
+    border-right: 1px solid #1A1A1A;
+  }
+  .bready-footer .inner-wrap .footer-right {
+    width: 50%;
+  }
+  .bready-footer .footer-left-top {
+    padding: 0;
+    background: #0033C3;
+  }
+  .bready-footer .footer-notice {
+    padding: 20px 50px;
+    height: auto;
+    overflow: visible;
+  }
+  .bready-footer .footer-notice .tit {
+    width: 205px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+  }
+  .bready-footer .footer-notice .tit::after {
+    content: none;
+  }
+  .bready-footer .footer-notice .tit > span {
+    width: 59px;
+  }
+  .bready-footer .footer-notice .footer-notice-list {
+    position: static;
+    width: calc(100% - 205px);
+  }
+  .bready-footer .footer-notice .footer-notice-list > li {
+    font-size: 14px;
+    color: #E6E6E6;
+    line-height: 24px;
+  }
+  .bready-footer .footer-notice .footer-notice-list > li + li {
+    margin-top: 4px;
+  }
+  .bready-footer .footer-notice .footer-notice-list > li > a {
+    color: #fff;
+  }
+  .bready-footer .footer-left-btm {
+    display: flex;
+    border-top: 1px solid #1A1A1A;
+  }
+  .bready-footer .footer-logo {
+    padding: 20px 64px 0 55px;
+    border-bottom: 0;
+  }
+  .bready-footer .footer-logo > a {
+    display: inline-block;
+    width: 140px;
+    height: 23px;
+    background: url('../images/bready_logo_pcFooter.png') no-repeat;
+    background-size: 100% auto;
+  }
+  .bready-footer .footer-menu {
+    margin: 0;
+    padding: 14px 0 69px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  .bready-footer .footer-menu li {
+    border-bottom: 0;
+    margin-right: 15.62%;
+  }
+  .bready-footer .footer-menu li > a {
+    line-height: 36px;
+    padding: 0 40px 0 0;
+    position: relative;
+  }
+  .bready-footer .footer-menu li > a::after {
+    content: '';
+    width: 30px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/button_arrow_right_w_pc.png') no-repeat;
+    background-size: 100% auto;
+  }
+  .bready-footer .footer-menu li:last-child {
+    margin-right: 0;
+  }
+  .bready-footer .footer-share {
+    padding: 29px 0 0 50px;
+    margin-bottom: 25px;
+  }
+  .bready-footer .footer-share > li + li {
+    margin-left: 12px;
+  }
+  .bready-footer .footer-info {
+    padding-left: 50px;
+    padding-bottom: 33px;
+  }
+  .bready-footer .footer-info .footer-link {
+    margin-bottom: 16px;
+  }
+  .bready-footer .footer-info .footer-link > a {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .bready-footer .footer-info .footer-text .text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+  .bready-footer .footer-info .footer-text .text span {
+    display: inline;
+  }
+  .bready-footer .footer-info .footer-text .text span + span {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .page-wrapper .page-header .header.content .nav-sections {
+    margin-top: 50px !important;
+    border-top: 1px solid #3A4055;
+  }
+  .page-wrapper .page-header .header.content .panel.header .top-panel .search-area .block-search {
+    top: 131px;
+  }
+  .page-wrapper .page-header.sticky-header ~ .page-main,
+  .page-wrapper .page-header.sticky-header ~ .page-main-full-width {
+    padding-top: 131px;
+  }
+  .category-product .page-wrapper .page-header.sticky-header + .category-description {
+    padding-top: 131px;
+  }
+  .bready-footer .inner-wrap {
+    display: block;
+  }
+  .bready-footer .inner-wrap .footer-left {
+    width: 100%;
+  }
+  .bready-footer .inner-wrap .footer-left .footer-menu {
+    padding: 24px 0 30px 50px;
+  }
+  .bready-footer .inner-wrap .footer-right {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+  .page-wrapper .page-header .header.content .nav-sections .navigation > ul {
+    justify-content: left;
+    padding-left: 180px;
+  }
+}
+
+        </style>
+</head>
+
+<body data-container="body" id="html-body" class="cms-home layout-fullwidth wide mobile-sticky cms-index-index page-layout-1column">
+    <div class="widget block block-static-block">
+        <div class="top-marquee" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="main" data-pb-style="ST0FQA5">
+            <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                <style>
+                    .marquee {display:block;margin:0;text-decoration:none;background-color:#0033C3;border-top:1px solid #3A4055;border-bottom:1px solid #3A4055;position:relative;z-index:501;}
+                    .marquee .marquee_inner {overflow:hidden;padding:1px 0;} 
+                    .marquee .marquee_inner .marquee_box {display:flex;width:calc(388px * 20);padding-left:14px;animation:marquee 30s linear infinite;}
+                    .marquee .marquee_inner .marquee_box .marquee_txt {box-sizing:border-box;text-align:center;font-size:14px;color:#ccc;line-height:26px;font-weight:500;padding-right:215px;font-family:'NotoSansKr', sans-serif;letter-spacing:-.4px;}
+                    /* .marquee .marquee_inner .marquee_box:hover {-moz-animation-play-state:paused;-web kit-animation-play-state:paused;animation-play-state:paused;} */
+                    .sticky-marquee.top-marquee {position:fixed;top:0;left:0;width:100%;z-index:501;}
+                    @media not screen and (min-width: 768px) {
+                        .mobile-sticky .top-marquee {position:fixed;width:100%;top:0;left:0;z-index:501;}
+                    }
+                   
+                    @keyframes marquee{
+                        0%{transform: translateX(0)}
+                        100%{transform: translateX(calc(-384px * 10))}
+                    }
+                </style>
+            </div>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                <a href="#" class="marquee">
+                    <div class="marquee_inner">
+                        <div class="marquee_box">
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <!---->
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                            <div class="marquee_txt">
+                                KAKAO TALK 친구추가 500P
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                <!-- <script type="text/javascript">
+                require(['jquery', 'domReady!'], function($) { 
+                    if($('.page-header').hasClass('sticky-header')){
+                        $('.top-marquee').addClass('sticky-marquee');
+                    }
+            
+                    var timer;
+                    window.addEventListener('scroll', function(e) {
+                        if(timer) {
+                            return
+                        }
+                        timer = setTimeout(function() {
+                            if($('.page-header').hasClass('sticky-header')){
+                                $('.top-marquee').addClass('sticky-marquee');
+                            }else {
+                                $('.top-marquee').removeClass('sticky-marquee');
+                            }
+                            timer = null;
+                        }, 200);
+                    });
+                });
+                </script> -->
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <header class="page-header type3">
+            <div class="header content">
+                <a class="logo" href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/"
+                    title="B.READY logo" ap-click-area="GNB" ap-click-name="홈" ap-click-data="홈"><img
+                        src="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/logo/stores/5/bready_logo_mo.png"
+                        alt="B.READY logo"></a>
+                <div class="sections nav-sections">
+                    <button id="gnb-closed-btn" class="nav-close" type="button"></button>
+                    <a href="/customer/account/index/" class="nav-my-account" id="nav-my-account" style="display:none" ap-click-area="GNB" ap-click-name="GNB  마이페이지" ap-click-data=" 마이페이지"> <span>마이페이지</span></a>
+                    <div class="section-items nav-sections-items" role="tablist">
+                        <div class="section-item-title nav-sections-item-title active" data-role="collapsible"
+                            role="tab" data-collapsible="true" aria-controls="store.menu" aria-selected="false"
+                            aria-expanded="true" tabindex="0" style="display:none;">
+                            <a class="nav-sections-item-switch" data-toggle="switch" href="#store.menu"
+                                ap-click-area="GNB" ap-click-name="GNB 메뉴" ap-click-data="메뉴">메뉴</a>
+                        </div>
+                        <div class="section-item-content nav-sections-item-content" id="store.menu" data-role="content"
+                            role="tabpanel" aria-hidden="false">
+                            <nav class="navigation sw-megamenu" role="navigation" data-action="navigation">
+                                <ul>
+                                    <li class="ui-menu-item nav-1 category-item level0 fullwidth ">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/product.html"
+                                            class="level-top" title="MENU1" ap-click-area="GNB"
+                                            ap-click-name="GNB MENU1" ap-click-data="MENU1">
+                                            <span>MENU1</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item nav-2 category-item level0 fullwidth ">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/best.html"
+                                            class="level-top" title="MENU2" ap-click-area="GNB" ap-click-name="GNB MENU2"
+                                            ap-click-data="MENU2">
+                                            <span>MENU2</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item nav-3 category-item level0 fullwidth ">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/mom-baby.html"
+                                            class="level-top" title="MENU3" ap-click-area="GNB"
+                                            ap-click-name="GNB MENU3" ap-click-data="MENU3">
+                                            <span>MENU3</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item nav-4 category-item level0 fullwidth ">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/september.html"
+                                            class="level-top" title="MENU4" ap-click-area="GNB"
+                                            ap-click-name="GNB MENU4" ap-click-data="MENU4">
+                                            <span>MENU4</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item nav-5 category-item level0 fullwidth " style="height:30px;overflow-y:auto;">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/september.html"
+                                            class="level-top" title="MENU5" ap-click-area="GNB"
+                                            ap-click-name="GNB MENU5" ap-click-data="MENU5">
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                            <span>MENU5</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item nav-6 category-item level0 fullwidth ">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/september.html"
+                                            class="level-top" title="MENU6" ap-click-area="GNB"
+                                            ap-click-name="GNB MENU6" ap-click-data="MENU6">
+                                            <span>MENU5</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item level0 magazine">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/magazine" class="level-top">
+                                            <span>BE ISSUED</span>
+                                        </a>
+                                    </li>
+                                    <li class="ui-menu-item level0 events">
+                                        <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/events"
+                                            class="level-top" ap-click-area="GNB" ap-click-name="GNB 이벤트"
+                                            ap-click-data="이벤트">
+                                            <span>이벤트</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul class="header links">
+                                <li class="link authorization-link" id="login-link">
+                                    <a class="sso-login-link" href="javascript:void(0)">
+                                        <span>로그인</span> <span class="inblock-mo"> 해주세요</span>
+                                    </a>
+                                </li>
+                                <li id="signup-link" class="link-signup">
+                                    <a class="sso-signup-link" href="javascript:void(0)"> 회원가입 </a>
+                                </li>
+                                <li id="customer-center-link" class="link-store">
+                                    <a href="#">판매처</a><!-- [D]: add link -->
+                                </li>
+                                <li id="customer-center-link" class="link-cs-center">
+                                    <a href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/customer-center/">고객센터</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-item-title nav-sections-item-title" data-role="collapsible" role="tab"
+                            data-collapsible="true" aria-controls="store.links" aria-selected="false"
+                            aria-expanded="false" tabindex="0" style="display:none;">
+                            <a class="nav-sections-item-switch" data-toggle="switch" href="#store.links"
+                                ap-click-area="GNB" ap-click-name="GNB 계정" ap-click-data="계정">계정</a>
+                        </div>
+                        <div class="section-item-content nav-sections-item-content" id="store.links" data-role="content"
+                            role="tabpanel" aria-hidden="true" style="display: none;">
+                            <!-- Account links -->
+                            <ul class="header links">
+                                <li class="link authorization-link"><a ap-click-area="login" ap-click-name="Click Login"
+                                        ap-click-data="General Login" class="sso-login-link" href="javascript:void(0)"
+                                        data-login-url="https://dev-one-ap.amorepacific.com/oauth2/authorize?redirectUri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F&amp;channelCd=307&amp;response_type=code&amp;client_id=iXVPF11IZuqQcuxo_t0vo4d2DCka&amp;scope=openid&amp;redirect_uri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2Foauth2client&amp;state=%7BredirectUri%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+baseUrl%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+currentUrl%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/%2C+channelCd%3D307%2C+cancelUri%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+dt%3Dnull%2C+siteCd%3D%2C+ot%3Dnull%2C+join%3Dnull%2C+prompt%3Dnull%2C+vt%3Dnull%7D&amp;cancelUri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F"><span>로그인</span></a>
+                                </li>
+                                <li class="item link compare hide" data-bind="scope: 'compareProducts'"
+                                    data-role="compare-products-link"><a class="action compare" title="제품 비교"
+                                        data-bind="attr: {'href': compareProducts().listUrl}, css: {'': !compareProducts().count}"
+                                        ap-click-area="GNB" ap-click-name="GNB 제품 비교" ap-click-data="제품 비교"
+                                        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/catalog/product_compare/index/uenc/aHR0cHM6Ly9iZXJlYWR5LmludGVncmF0aW9uLTVvam15dXEta3VpeWxyajVsaGtsbS5hcC0zLm1hZ2VudG9zaXRlLmNsb3VkL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9JmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE2NjQ4NDU4MTA1NTg%2C/"><em
+                                            class="porto-icon-chart hidden-xs"></em> 비교 (<span class="counter qty"
+                                            data-bind="text: compareProducts().countCaption">0 항목</span>)</a></li>
+                                <li class="link-signup"><a class="sso-signup-link" href="javascript:void(0)"
+                                        data-signup-url="https://dev-one-ap.amorepacific.com/oauth2/authorize?redirectUri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F&amp;channelCd=307&amp;response_type=code&amp;client_id=iXVPF11IZuqQcuxo_t0vo4d2DCka&amp;scope=openid&amp;redirect_uri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2Foauth2client&amp;state=%7BredirectUri%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+baseUrl%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+channelCd%3D307%2C+cancelUri%3Dhttps%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F%2C+dt%3Dnull%2C+siteCd%3D%2C+ot%3Dnull%2C+prompt%3Dnull%2C+vt%3Dnull%2C+join%3Dtrue%7D&amp;join=true&amp;cancelUri=https%3A%2F%2Fbeready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud%2F&amp;joinPrtnld=11090346&amp;joinPrtnNm=DB_%EC%9D%BC%EB%A6%AC%EC%9C%A4+%EC%A7%81%EC%98%81%EB%AA%B0"
+                                        ap-click-area="GNB" ap-click-name="GNB 회원가입" ap-click-data="회원가입">회원가입</a></li>
+                                <li class="nav item"><a
+                                        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/blog.html"
+                                        ap-click-area="GNB" ap-click-name="GNB Blog" ap-click-data="Blog">Blog</a></li>
+                                <li class="link-cs-center"><a
+                                        href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/customer-center"
+                                        ap-click-area="GNB" ap-click-name="GNB 고객센터" ap-click-data="고객센터">고객센터</a></li>
+                            </ul>
+                        </div>
+                        <div class="section-item-title nav-sections-item-title" data-role="collapsible" role="tab"
+                            data-collapsible="true" aria-controls="store.settings" aria-selected="false"
+                            aria-expanded="false" tabindex="0" style="display:none;">
+                            <a class="nav-sections-item-switch" data-toggle="switch"
+                                href="#store.settings" ap-click-area="GNB" ap-click-name="GNB 설정"
+                                ap-click-data="설정">설정</a></div>
+                        <div class="section-item-content nav-sections-item-content" id="store.settings"
+                            data-role="content" role="tabpanel" aria-hidden="true" style="display: none;">
+                            <div class="switcher currency switcher-currency" id="switcher-currency-nav"><strong
+                                    class="label switcher-label"><span>통화</span></strong>
+                                <div class="actions dropdown options switcher-options">
+                                    <div class="action toggle switcher-trigger" id="switcher-currency-trigger-nav">
+                                        <strong class="language-KRW"><span>KRW - 대한민국 원</span></strong></div>
+                                    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog"
+                                        tabindex="-1" role="dialog" aria-describedby="ui-id-1" style="display: none;">
+                                        <ul class="dropdown switcher-dropdown ui-dialog-content ui-widget-content"
+                                            id="ui-id-1" style="display: block;">
+                                            <li class="currency-USD switcher-option"><a href="#"
+                                                    data-post="{&quot;action&quot;:&quot;https:\/\/beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud\/directory\/currency\/switch\/&quot;,&quot;data&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;uenc&quot;:&quot;aHR0cHM6Ly9iZXJlYWR5LmludGVncmF0aW9uLTVvam15dXEta3VpeWxyajVsaGtsbS5hcC0zLm1hZ2VudG9zaXRlLmNsb3VkLw,,&quot;}}"
+                                                    ap-click-area="GNB" ap-click-name="GNB USD - 미국 달러"
+                                                    ap-click-data="USD - 미국 달러">USD - 미국 달러</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel header">
+                    <div class="top-panel">
+                        <a class="action skip contentarea" href="#contentarea" ap-click-area="GNB"
+                            ap-click-name="GNB  컨텐츠로 건너 뛰기" ap-click-data=" 컨텐츠로 건너 뛰기"><span> 컨텐츠로 건너 뛰기</span></a>
+                        <span data-action="toggle-nav" class="action nav-toggle"><span>탐색 전환</span></span>
+                        <ul class="header links">
+                            <li class="link authorization-link">
+                                <a class="sso-login-link" href="javascript:void(0)"><span>로그인</span></a>
+                            </li>
+                            <li class="item link compare hide">
+                                <a class="action compare" title="제품 비교" href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/catalog/product_compare/index/uenc/aHR0cHM6Ly9iZXJlYWR5LmludGVncmF0aW9uLTVvam15dXEta3VpeWxyajVsaGtsbS5hcC0zLm1hZ2VudG9zaXRlLmNsb3VkL2N1c3RvbWVyL3NlY3Rpb24vbG9hZC8_c2VjdGlvbnM9JmZvcmNlX25ld19zZWN0aW9uX3RpbWVzdGFtcD1mYWxzZSZfPTE2NjQ4NDU4MTA1NTg%2C/"><em
+                                        class="porto-icon-chart hidden-xs"></em> 비교 (<span class="counter qty"
+                                        data-bind="text: compareProducts().countCaption">0 항목</span>)</a>
+                            </li>
+                            <li class="link-signup">
+                                <a class="sso-signup-link" href="javascript:void(0)">회원가입</a>
+                            </li>
+                        </ul>
+                        <div class="search-area">
+                            <a href="javascript:void(0)">
+                                SEARCH
+                            </a> 
+                            <a href="https://dev-one-ap.amorepacific.com/oauth2/authorize?redirectUri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/customer/account/index/&amp;channelCd=307&amp;response_type=code&amp;client_id=iXVPF11IZuqQcuxo_t0vo4d2DCka&amp;scope=openid&amp;redirect_uri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/oauth2client&amp;state=%7BredirectUri%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/customer/account/index/%2C+baseUrl%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/%2C+currentUrl%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/customer/account/index/%2C+channelCd%3D307%2C+cancelUri%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/%2C+dt%3Dnull%2C+siteCd%3D%2C+ot%3Dnull%2C+join%3Dnull%2C+prompt%3Dnull%2C+vt%3Dnull%7D&amp;cancelUri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/"
+                                class="my-account" title="My Account"><span class="hidden">마이페이지</span>
+                            </a>
+                            <div class="block block-search">
+                                <button type="button" class="btn-close-search"><span class="hidden">닫기</span></button><!-- [D] : close search layer button -->
+                                <div class="block block-title"><strong>검색</strong></div>
+                                <div class="block block-content">
+                                    <form class="form minisearch" id="search_mini_form"
+                                        action="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/catalogsearch/result/"
+                                        method="get">
+                                        <div class="field search">
+                                            <label class="label" for="search" data-role="minisearch-label"><span>SEARCH</span></label>
+                                            <div class="control">
+                                                <div class="control-inner">
+                                                    <input id="search" type="text" name="q"
+                                                        value="" placeholder="무엇을 찾고 계신가요?" class="input-text"
+                                                        maxlength="128" role="combobox" aria-haspopup="false"
+                                                        aria-autocomplete="both" autocomplete="off">
+                                                    <button type="button" class="btn-clear-search"><span class="hidden">전체 지우기</span></button><!-- [D] : clear text button (only mobile) -->
+                                                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                                                    <div class="nested"><a class="action advanced"
+                                                            href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/catalogsearch/advanced/"
+                                                            data-action="advanced-search" ap-click-area="GNB"
+                                                            ap-click-name="GNB 고급 검색" ap-click-data="고급 검색">고급 검색</a>
+                                                    </div>
+                                                    <style>
+                                                        .search-high-light {
+                                                            color: #38A1F9 !important;
+                                                            font-weight: 500
+                                                        }
+                                                    </style>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="actions">
+                                            <button type="submit" ap-click-area="GNB"
+                                                ap-click-data="검색" ap-click-name="GNB검색" title="검색"
+                                                class="action search" disabled=""><span>검색</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-panel">
+                        <div class="switcher currency switcher-currency" id="switcher-currency">
+                            <strong class="label switcher-label"><span>통화</span></strong>
+                            <div class="actions dropdown options switcher-options">
+                                <div class="action toggle switcher-trigger" id="switcher-currency-trigger">
+                                    <strong class="language-KRW"><span>KRW - 대한민국 원</span></strong>
+                                </div>
+                                <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog" tabindex="-1" role="dialog" aria-describedby="ui-id-2" style="display: none;">
+                                    <ul class="dropdown switcher-dropdown ui-dialog-content ui-widget-content" id="ui-id-2" style="display: block;">
+                                        <li class="currency-USD switcher-option">
+                                            <a href="#" >USD - 미국 달러</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [D] ADD custom-block // block name of class "block-content-header" already exists -->
+                        <div class="custom-block">
+                            <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                                <a href="#" class="custom-header-menu">SHOP</a>
+                            </div>
+                        </div>
+                        <div data-block="minicart" class="minicart-wrapper">
+                            <a class="action showcart" href="https://dev-one-ap.amorepacific.com/oauth2/authorize?redirectUri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/checkout/cart/&amp;channelCd=307&amp;response_type=code&amp;client_id=iXVPF11IZuqQcuxo_t0vo4d2DCka&amp;scope=openid&amp;redirect_uri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/oauth2client&amp;state=%7BredirectUri%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/checkout/cart/%2C+baseUrl%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/%2C+currentUrl%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/checkout/cart/%2C+channelCd%3D307%2C+cancelUri%3Dhttps://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/%2C+dt%3Dnull%2C+siteCd%3D%2C+ot%3Dnull%2C+join%3Dnull%2C+prompt%3Dnull%2C+vt%3Dnull%7D&amp;cancelUri=https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/">
+                                <span class="text">CART</span> 
+                                <span class="counter qty empty">
+                                    <span class="counter-number">(0)</span>
+                                    <span class="counter-label"></span>
+                                </span>
+                            </a>
+                            
+                            <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front mage-dropdown-dialog"
+                                tabindex="-1" role="dialog" aria-describedby="ui-id-3" style="display: none;">
+                                <div class="block block-minicart ui-dialog-content ui-widget-content"
+                                    data-role="dropdownDialog" id="ui-id-3" style="display: block;">
+                                    <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                                        <div class="block-title">
+                                            <strong>
+                                                <span class="text">
+                                                    <span>내 카트</span>
+                                                </span>
+                                                <span class="qty empty" title="구매 상품목록">0</span>
+                                            </strong>
+                                        </div>
+
+                                        <div class="block-content">
+                                            <button type="button" id="btn-minicart-close" class="action close" data-action="close" title="닫기">
+                                                <span data-bind="i18n: 'Close'">닫기</span>
+                                            </button>
+
+                                            <strong class="subtitle empty">
+                                                <span>장바구니에 담으신 상품이 없습니다.</span>
+                                            </strong>
+                                            <div class="empty-msg">
+                                                <p>
+                                                    <span>최근
+                                                        다른 고객들이 많이 찾는.</span><br>
+                                                    <a class="empty-msg-link" href="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/best.html">
+                                                        <span>베스트 제품</span>
+                                                    </a>
+                                                    <span>을 함께 확인해보세요!</span>
+                                                </p>
+                                            </div>
+
+                                            <div id="minicart-widgets" class="minicart-widgets">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- content S //-->
+        <main id="maincontent" class="page-main">
+            <div class="page-top">
+                <div class="page-title">
+                    <button type="button" class="btn-back" href="javascript:void(0)">
+                        <span class="hidden">뒤</span>
+                    </button>
+                    <span>Beready Homepage</span>
+                </div>
+            </div>
+            <a id="contentarea" tabindex="-1"></a>
+            <div class="page messages">
+                <div data-placeholder="messages"></div>
+                <div data-bind="scope: 'messages'"></div>
+            </div>
+            <div class="columns">
+                <div class="column main" style="height:400px;">
+
+                </div>
+            </div>
+        </main>
+        <!--// content E -->
+
+        <!-- footer S //-->
+        <footer class="page-footer">
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="custom-block">
+                                    <div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+                                        <div class="bready-footer">
+                                            <div class="inner-wrap">
+                                                <div class="footer-left">
+                                                    <div class="footer-left-top">
+                                                        <div class="footer-notice">
+                                                            <span class="tit"><span>공지사항</span></span>
+                                                            <ul class="footer-notice-list">
+                                                                <li><a href="#">아모레퍼시픽 신한카드(PLCC) 간편결제 사용 관련 안내</a></li>
+                                                                <li><a href="#">10월 비레디 라이브 방송 이벤트 당첨자 경품 택배 파업으로 지연 공지</a></li>
+                                                                <li><a href="#">무통장입금 이용 후 야간입금시 유의사항 안내</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="footer-left-btm">
+                                                        <div class="footer-logo">
+                                                            <a href="/"><span class="hidden">B.READY</span></a>
+                                                        </div>
+                                                        <ul class="footer-menu">
+                                                            <li>
+                                                                <a href="/brand">BRAND</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/customer-center">CUSTOMER CENTER</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/inquiry">Q&A</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="footer-right">
+                                                    <ul class="footer-share">
+                                                        <li class="footer-share-item1">
+                                                            <a href="https://www.youtube.com/channel/UC0LBE-AMc1rRfdEEdQ3KP6g" target="_blank">
+                                                                <span class="hidden">youtube</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="footer-share-item2">
+                                                            <a href="https://www.instagram.com/beready_project/" target="_blank">
+                                                                <span class="hidden">instagram</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="footer-share-item3">
+                                                            <a href="https://www.facebook.com/official.beready" target="_blank">
+                                                                <span class="hidden">facebook</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="footer-info">
+                                                        <div class="footer-link">
+                                                            <a href="https://www.beautypoint.co.kr/footer/agreement.do" target="_blank" rel="noopener noreferrer" title="새창 열기">이용약관</a>&nbsp;&nbsp;ㅣ&nbsp;&nbsp;</li>
+                                                            <a href="https://www.beautypoint.co.kr/footer/privacy.do" target="_blank" rel="noopener noreferrer" title="새창 열기">개인정보처리방침</a>
+                                                        </div>
+                                                        <div class="footer-text">
+                                                            <p class="text">
+                                                                <span>㈜아모레퍼시픽 서울특별시 용산구 한강대로 100(한강로2가)</span>
+                                                            </p>
+                                                            <p class="text">
+                                                                <span>제품 문의 고객센터 : 080-023-5454</span>
+                                                                <span>대표이사 : 안세홍 | 사업자등록번호 : 106-86-43373</span>
+                                                                
+                                                            </p>
+                                                            <p class="text">
+                                                                <span>통신판매업신고번호 : 2017-서울용산-1308</span>
+                                                                <span>호스팅제공자 : (주)아모레퍼시픽</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            //require(['jquery', 'domReady!'], function($) {
+                                            
+                                                $(document).ready(function(){
+                                                    var winchk = '';
+                                                    var noticeUpStart;
+                                                    var height = $('.footer-notice').height();
+                                                    var num = $('.footer-notice-list li').length;
+                                                    var max = height * num;
+                                                    var move = 0;
+
+                                                    function noticeUp(){
+                                                        move += height;
+
+                                                        $('.footer-notice-list').animate({"top":-move}, 500, function(){
+                                                            if(move >= max){
+                                                                $(this).css("top",0);
+                                                                move = 0;
+                                                            }
+                                                        });
+                                                    }
+                                                    
+                                                    if($(window).width() < 768){
+                                                        $('.footer-notice-list').append($(".footer-notice-list li").first().clone());
+                                                        noticeUpStart = setInterval(noticeUp,1000);
+                                                        winchk = 'mo';
+                                                    }else {
+                                                        winchk = 'pc';
+                                                    }
+                                                    $(window).on('resize', function(){
+                                                        if($(window).width() < 768 && winchk === 'pc'){
+                                                            height = $('.footer-notice').height();
+                                                            num = $('.footer-notice-list li').length;
+                                                            max = height * num
+                                                            $('.footer-notice-list').append($(".footer-notice-list li").first().clone());
+                                                            noticeUpStart = setInterval(noticeUp,1000);
+                                                            winchk = 'mo';
+
+                                                        }else if($(window).width() >= 768 && winchk === 'mo') {
+                                                            clearInterval(noticeUpStart);
+                                                            $(".footer-notice-list li").last().remove();
+                                                            winchk = 'pc';
+                                                        }
+                                                    });
+
+                                                });
+                                            //});
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--// footer E -->
+    </div>
+</body>
+
+</html>
