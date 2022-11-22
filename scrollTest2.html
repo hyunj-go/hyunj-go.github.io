@@ -5,11 +5,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B.Ready :: template</title>
+    <title></title>
     <style>
         
+.amblog-index-index .page-wrapper .page-main .sidebar-main {
+    position: fixed !important;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #3a4055;
+    z-index: 4
+}
 
-/*Magento_Theme_extends*/
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container {
+    border-bottom: 0
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container {
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-title,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-title,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-title {
+    display: none
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list {
+    display: block !important;
+    padding: 0
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories {
+    white-space: nowrap;
+    text-align: center;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories::-webkit-scrollbar,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories::-webkit-scrollbar,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories::-webkit-scrollbar {
+    display: none
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category {
+    display: inline-block;
+    font-size: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
+    vertical-align: top;
+    padding: 0;
+    border-bottom: 0
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link {
+    width: 56px;
+    padding-top: 62px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #666;
+    position: relative;
+    white-space: normal
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link .amblog-category-count,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link .amblog-category-count,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link .amblog-category-count {
+    display: none
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link:before {
+    content: '';
+    width: 100%;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active {
+    color: #0033c3;
+    font-weight: 700
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:before {
+    color: #0033c3 !important;
+    background-color: #fff
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:after,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:after,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category .amblog-link.amblog-active:after {
+    content: '';
+    width: 56px;
+    height: 56px;
+    border: 1px solid #0033c3;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child {
+    margin-left: 20px
+}
+
+.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-element-block .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child .amblog-link:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-post-container .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child .amblog-link:before,.amblog-index-index .page-wrapper .page-main .sidebar-main .amblog-grid-list .slick-slide .amblog-item .amblog-widget-container .amblog-widget-container .amblog-list .amblog-categories .amblog-category:first-child .amblog-link:before {
+    content: 'ALL';
+    width: 100%;
+    height: 56px;
+    color: #000;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-align: center;
+    background-image: none;
+    padding-top: 20px
+}
+/**/
 body,
 a,
 button,
@@ -1495,6 +1612,8 @@ div.breadcrumbs .items li a {
 }
 
         </style>
+    <script type="text/javascript" src="https://beready.integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/static/version1664782885/frontend/BeReady/kr/ko_KR/jquery.min.js"></script>
+    <script src="https://mcstaging.beready.co.kr/static/version1669082802/frontend/BeReady/kr/ko_KR/AP_Blog/js/slick.min.js"></script>
 </head>
 
 <body data-container="body" id="html-body" class="cms-home layout-fullwidth wide mobile-sticky cms-index-index page-layout-1column">
@@ -1923,7 +2042,7 @@ div.breadcrumbs .items li a {
                     <button type="button" class="btn-back" href="javascript:void(0)">
                         <span class="hidden">뒤</span>
                     </button>
-                    <span>Beready Homepage</span>
+                    <span></span>
                 </div>
             </div>
             <a id="contentarea" tabindex="-1"></a>
@@ -1932,9 +2051,54 @@ div.breadcrumbs .items li a {
                 <div data-bind="scope: 'messages'"></div>
             </div>
             <div class="columns">
-                <div class="column main" style="height:400px;">
+                <div class="column main">
 
                 </div>
+                <div class="sidebar sidebar-main">    <div data-amblog-js="element-block" class="desktop-block amblog-element-block" data-set="sidebar-category"><div data-amblog-js="accordion" class="amblog-widget-container -categories" role="tablist"><h3 class="amblog-title -accordion" data-amblog-js="heading" data-collapsible="true" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">카테고리</h3><div class="amblog-list" data-amblog-js="content" role="tabpanel" aria-hidden="true" style="display: none;"><ul class="amblog-categories -level1"><li class="amblog-category  amblog-category-3"><a class="amblog-link" data-cat-id="3" title="전체보기" href="#">all <span class="amblog-category-count">(4)</span></a> </li><li class="amblog-category  amblog-category-6"><a class="amblog-link" data-cat-id="6" title="HOW TO" href="#">tab <span class="amblog-category-count">(2)</span></a> </li><li class="amblog-category  amblog-category-9"><a class="amblog-link" data-cat-id="9" title="tab" href="#">tab <span class="amblog-category-count">(3)</span></a> </li><li class="amblog-category  amblog-category-12"><a class="amblog-link" data-cat-id="12" title="123" href="#">tab <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-15"><a class="amblog-link" data-cat-id="15" title="tab" href="#">tab <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-18"><a class="amblog-link" data-cat-id="18" title="Category3" href="#">Category3 <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-21"><a class="amblog-link" data-cat-id="21" title="Category4" href="#">Category4 <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-24"><a class="amblog-link" data-cat-id="24" title="Category5" href="#">Category5 <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-27"><a class="amblog-link" data-cat-id="27" title="Category6" href="#">Category6 <span class="amblog-category-count">(0)</span></a> </li><li class="amblog-category  amblog-category-30"><a class="amblog-link" data-cat-id="30" title="Category7" href="#">Category7 <span class="amblog-category-count">(0)</span></a> </li></ul></div></div>  <script>
+    
+    var slickOption = {
+        infinite: false,
+        slidesToShow: 8,
+        slidesToSlide: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings:{
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings:{
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: "unslick"
+            },
+
+        ]
+    }
+    $('.amblog-categories').slick(slickOption);
+
+    
+    var viewchk = '';
+    if($(window).width()>767){
+        viewchk = 'pc';
+    }else {
+        viewchk = 'mo';
+    }
+    $(window).resize(function(){
+        if($(window).width()>767 && viewchk == 'mo'){
+            $('.amblog-categories').slick(slickOption);
+            viewchk = 'pc'
+        }else if($(window).width()<=767 && viewchk == 'pc'){
+            viewchk = 'mo'
+        }
+    });
+    </script>
+    </div>  <div class="ambanners ambanner-2" data-position="2" data-bannerid="" data-role="amasty-banner-container"></div></div>
             </div>
         </main>
         <!--// content E -->
@@ -1955,16 +2119,13 @@ div.breadcrumbs .items li a {
                                                         <div class="footer-notice">
                                                             <span class="tit"><span>공지사항</span></span>
                                                             <ul class="footer-notice-list">
-                                                                <li><a href="#">아모레퍼시픽 신한카드(PLCC) 간편결제 사용 관련 안내</a></li>
-                                                                <li><a href="#">10월 비레디 라이브 방송 이벤트 당첨자 경품 택배 파업으로 지연 공지</a></li>
-                                                                <li><a href="#">무통장입금 이용 후 야간입금시 유의사항 안내</a></li>
+                                                                <li><a href="#"> 관련 안내</a></li>
+                                                                <li><a href="#"> 지연 공지</a></li>
+                                                                <li><a href="#">무통장입금</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="footer-left-btm">
-                                                        <div class="footer-logo">
-                                                            <a href="/"><span class="hidden">B.READY</span></a>
-                                                        </div>
                                                         <ul class="footer-menu">
                                                             <li>
                                                                 <a href="/brand">BRAND</a>
@@ -1981,38 +2142,38 @@ div.breadcrumbs .items li a {
                                                 <div class="footer-right">
                                                     <ul class="footer-share">
                                                         <li class="footer-share-item1">
-                                                            <a href="https://www.youtube.com/channel/UC0LBE-AMc1rRfdEEdQ3KP6g" target="_blank">
+                                                            <a href="#" target="_blank">
                                                                 <span class="hidden">youtube</span>
                                                             </a>
                                                         </li>
                                                         <li class="footer-share-item2">
-                                                            <a href="https://www.instagram.com/beready_project/" target="_blank">
+                                                            <a href="#" target="_blank">
                                                                 <span class="hidden">instagram</span>
                                                             </a>
                                                         </li>
                                                         <li class="footer-share-item3">
-                                                            <a href="https://www.facebook.com/official.beready" target="_blank">
+                                                            <a href="#" target="_blank">
                                                                 <span class="hidden">facebook</span>
                                                             </a>
                                                         </li>
                                                     </ul>
                                                     <div class="footer-info">
                                                         <div class="footer-link">
-                                                            <a href="https://www.beautypoint.co.kr/footer/agreement.do" target="_blank" rel="noopener noreferrer" title="새창 열기">이용약관</a>&nbsp;&nbsp;ㅣ&nbsp;&nbsp;</li>
-                                                            <a href="https://www.beautypoint.co.kr/footer/privacy.do" target="_blank" rel="noopener noreferrer" title="새창 열기">개인정보처리방침</a>
+                                                            <a href="#" target="_blank" rel="noopener noreferrer" title="새창 열기">이용약관</a>&nbsp;&nbsp;ㅣ&nbsp;&nbsp;</li>
+                                                            <a href="#" target="_blank" rel="noopener noreferrer" title="새창 열기">개인정보처리방침</a>
                                                         </div>
                                                         <div class="footer-text">
                                                             <p class="text">
-                                                                <span>㈜아모레퍼시픽 서울특별시 용산구 한강대로 100(한강로2가)</span>
+                                                                <span>adsfasdf</span>
                                                             </p>
                                                             <p class="text">
-                                                                <span>제품 문의 고객센터 : 080-023-5454</span>
-                                                                <span>대표이사 : 안세홍 | 사업자등록번호 : 106-86-43373</span>
+                                                                <span>123456789</span>
+                                                                <span>adsfasdfasdf</span>
                                                                 
                                                             </p>
                                                             <p class="text">
-                                                                <span>통신판매업신고번호 : 2017-서울용산-1308</span>
-                                                                <span>호스팅제공자 : (주)아모레퍼시픽</span>
+                                                                <span></span>
+                                                                <span></span>
                                                             </p>
                                                         </div>
                                                     </div>
