@@ -7,6 +7,229 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        .slick-slider {
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-touch-action: pan-y;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    touch-action: pan-y;
+    user-select: none
+}
+
+.slick-list {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative
+}
+
+.slick-list:focus {
+    outline: none
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
+
+.slick-track {
+    display: block;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0
+}
+
+.slick-track:before,.slick-track:after {
+    content: '';
+    display: table
+}
+
+.slick-track:after {
+    clear: both
+}
+
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-slide img {
+    display: block
+}
+
+.slick-slide.slick-loading img {
+    display: none
+}
+
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+    display: block
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+    border: 1px solid transparent;
+    display: block;
+    height: auto
+}
+
+.slick-slider .slick-track,.slick-slider .slick-list {
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+.slick-prev {
+    left: 2rem
+}
+
+.slick-prev:before {
+    content: '\f103';
+    padding-right: 5px
+}
+
+.slick-next {
+    right: 2rem
+}
+
+.slick-next:before {
+    content: '\f102';
+    padding-left: 5px
+}
+
+.slick-prev,.slick-next {
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    background: rgba(252,252,252,.6);
+    border: none;
+    border-radius: 0;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 60px;
+    line-height: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 60px;
+    z-index: 101
+}
+
+.slick-prev.slick-disabled,.slick-next.slick-disabled {
+    opacity: .2
+}
+
+.slick-prev:hover,.slick-next:hover {
+    background: #fcfcfc;
+    border: none
+}
+
+.slick-prev:hover.slick-disabled,.slick-next:hover.slick-disabled {
+    opacity: .2
+}
+
+.slick-prev:hover:before,.slick-next:hover:before {
+    color: #494949
+}
+
+.slick-prev:before,.slick-next:before,.slick-prev:after,.slick-next:after {
+    color: #555;
+    font-size: 38px;
+    opacity: 1
+}
+
+.slick-prev:active,.slick-next:active,.slick-prev:focus,.slick-next:focus,.slick-prev:not(.primary),.slick-next:not(.primary) {
+    background: rgba(252,252,252,.7);
+    border: none;
+    box-shadow: none
+}
+
+.slick-prev:active:active,.slick-next:active:active,.slick-prev:focus:active,.slick-next:focus:active,.slick-prev:not(.primary):active,.slick-next:not(.primary):active {
+    box-shadow: none
+}
+
+.slick-dots {
+    font-size: 1.3rem;
+    line-height: normal;
+    letter-spacing: normal;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%
+}
+
+.slick-dots li {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 14px
+}
+
+.slick-dots li button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    height: 14px;
+    padding: 0;
+    text-indent: -99999px;
+    transition: .3s;
+    width: 14px
+}
+
+.slick-dots li button:hover {
+    border: 1px solid #b3b3b3
+}
+
+.slick-dots li button:active,.slick-dots li button:focus,.slick-dots li button:not(.primary) {
+    box-shadow: none
+}
+
+.slick-dots li.slick-active button {
+    background: #1c1918
+}/**/
         
 .amblog-index-index .page-wrapper .page-main .sidebar-main {
     position: fixed !important;
