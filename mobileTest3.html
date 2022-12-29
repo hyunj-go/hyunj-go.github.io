@@ -1,55 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .share-url {
+        .social-links {
+            position: relative
+        }
+        .social-links .link-open {
+            right: 20px;
+            top: -63px
+        }
+
+        .social-links .addthis_inline_share_toolbox {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% - 40px);
+    height: 222px;
+    background: #fff;
+    padding: 0 67px;
+    z-index: 1001
+}
+
+
+
+.share-button-list {
     display: flex;
-    position: relative;
-    margin-top: 20px
+    justify-content: center
 }
 
-.share-url .share-ip {
-    width: 100%;
-    padding: 8px 4px 8px 12px;
-    font-size: 14px;
-    line-height: 22px;
-    color: #666;
-    font-weight: 400;
-    border: 1px solid #3a4055;
-    height: auto;
-    padding-right: 80px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
-}
 
-.share-url .url-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 9px 12px 10px;
-    background: #000;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #fff;
-    width: 80px;
-    letter-spacing: -1.5px;
-    border:0;
-}
+      .share-url {
+        display: flex;
+        position: relative;
+        margin-top: 20px;
+      }
 
+      .share-url .share-ip {
+        width: 100%;
+        padding: 8px 4px 8px 12px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #666;
+        font-weight: 400;
+        border: 1px solid #3a4055;
+        height: auto;
+        padding-right: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .share-url .url-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 9px 12px 10px;
+        background: #000;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        color: #fff;
+        width: 80px;
+        letter-spacing: -1.5px;
+        border: 0;
+      }
     </style>
-</head>
-<body>
-	<div class="wrap">
-	  <div class="share-url">
-		  <input type="text" title="URL 복사" class="share-ip" value="asdfasdfasdfasdfasdf">
-		  <button type="button" class="url-btn">URL 복사</button>
-	  </div>
-	</div>
-</body>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="social-links open">
+        <button type="button" class="link-open">
+          <span class="hidden">공유하기</span>
+        </button>
+        <div class="addthis_inline_share_toolbox">
+          <button type="button" class="btn-close">
+            <span class="hidden">공유하기 닫기</span>
+          </button>
+          <div class="share-url">
+            <input
+              type="text"
+              title="URL 복사"
+              class="share-ip"
+              value="asdfasdfasdfasdfasdf"
+            />
+            <button
+              type="button"
+              class="url-btn"
+            >
+              URL복사
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
