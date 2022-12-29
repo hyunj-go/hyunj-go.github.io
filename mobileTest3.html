@@ -6,57 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .hidden {position:absolute;overflow:hidden;width:0;height:0;border:0;clip:rect(1px, 1px, 1px, 1px);clip-path:50%;}
+        .share-url {
+    display: flex;
+    position: relative;
+    margin-top: 20px
+}
+
+.share-url .share-ip {
+    width: 100%;
+    padding: 8px 4px 8px 12px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    font-weight: 400;
+    border: 1px solid #3a4055;
+    height: auto;
+    padding-right: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.share-url .url-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 9px 12px 10px;
+    background: #000;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+    width: 80px;
+    letter-spacing: -1.5px;
+    border:0;
+}
+
     </style>
 </head>
 <body>
-  <div class="wrap">
-    <p>testtttt</p>
-    <div class="sub-title-area">
-				<h3>LOCATION</h3>
-				<p id="txAddress">서울특별시 1234567</p>
-				<button class="btn btn-copy" onclick="copycopy('txAddress', this);"><span>Copy Address</span></button>
-			</div>
-	  
-	  <p>asdfasdf</p>
-	  
-	  <div>
-		  <p>asdfasdfdfdfdfsdfsdfsdf</p>
+	<div class="wrap">
+	  <div class="share-url">
+		  <input type="text" title="URL 복사" class="share-ip" value="asdfasdfasdfasdfasdf">
+		  <button type="button" class="url-btn">URL 복사</button>
 	  </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    var copycopy = (function(){
-	var copied = false; console.log(copied);
-	return function(element, copyBtn) {
-		if(!copied){
-			copied = true;console.log(copied);
-			
-			var $temp = $("<input type='text' aria-hidden='true' style='position:absolute;top:-9999px;left:-9999px' />");
-			$("body").append($temp);
-			$temp.val($('#'+element).text()).select();
-			document.execCommand("copy");
-			$temp.remove();
-			
-			if($(copyBtn).siblings('.copy-alert').length){
-				$('.copy-alert').remove();
-			}
-			$(copyBtn).after('<span class="copy-alert" aria-live="polite">복사되었습니다.</span>');
-			setTimeout(function(){
-				$('.copy-alert').remove();
-				copied = false; console.log(copied);
-			},5000);
-			$(copyBtn).focus();
-			
-		//	if(!alert("복사되었습니다.")){ 
-		//		setTimeout(function(){
-		//			copyBtn.focus();
-		//		},1);
-		//	}
-		}
-	}
-})();
-
-  </script>
+	</div>
 </body>
 </html>
