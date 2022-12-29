@@ -133,8 +133,9 @@ button, button:not(.primary) {
 
       .share-url .url-btn {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 50%;
+        right: 50%;
+        transform:translate(-50%, -50%);
         padding: 9px 12px 10px;
         background: #000;
         font-size: 14px;
@@ -144,8 +145,6 @@ button, button:not(.primary) {
         width: 80px;
         letter-spacing: -1.5px;
         border: 0;
-        margin:0;
-        line-height:1;
       }
     </style>
   </head>
@@ -170,7 +169,7 @@ button, button:not(.primary) {
               type="button"
               class="url-btn"
             >
-              URL복사
+              URL복
             </button>
           </div>
         </div>
