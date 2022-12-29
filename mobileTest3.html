@@ -33,7 +33,7 @@
           cursor: default;
           box-sizing: border-box;
           background-color: buttonface;
-          
+          /*margin: 0em;*/
           
           padding: 1px 6px;
           border-width: 2px;
@@ -42,7 +42,20 @@
           border-image: initial;
 }
 button {
-    
+        background-image: none;
+    background: #eee;
+    border: 1px solid #ccc;
+    color: #777;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'soehne','NotoSansKr',sans-serif;
+    font-weight: 600;
+   /* margin: 0;*/
+    padding: 7px 15px;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    vertical-align: middle;
 } 
 button, a.action.primary {
     border-radius: 3px;
@@ -155,7 +168,7 @@ button, button:not(.primary) {
               type="button"
               class="url-btn"
             >
-              URL
+              URL복사
             </button>
           </div>
         </div>
