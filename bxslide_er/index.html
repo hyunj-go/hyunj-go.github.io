@@ -17,7 +17,7 @@
         <div class="swiper-slide item">
             <img src="https://starville.ninebridges.co.kr/upload/contents/activity/6781820250317165316.jpg" alt="">
         </div>
-<!--         <div class="swiper-slide item">
+        <!-- <div class="swiper-slide item">
             <img src="https://starville.ninebridges.co.kr/upload/contents/activity/6781820250317165316.jpg" alt="">
         </div>
         <div class="swiper-slide item">
@@ -62,6 +62,7 @@ function initLayerSlider(){
 			maxSlides: 1,
 			pager: false,
 			speed: 500,		
+            touchEnabled: true,
 			prevText:'<span class="hidden">이전 이미지</span>',
 			nextText:'<span class="hidden">다음 이미지</span>',
 
@@ -88,31 +89,31 @@ function initLayerSlider(){
 			},
 		}
 
-		if(vWebType == 'PC'){
-			layer_option[idx].touchEnabled = false;
-		}else{
-			layer_option[idx].touchEnabled = true;
-		}
+		// if(vWebType == 'PC'){
+		// 	layer_option[idx].touchEnabled = false;
+		// }else{
+		// 	layer_option[idx].touchEnabled = true;
+		// }
 		layer_slider[idx] = $(this).find('.layer-slider').bxSlider(layer_option[idx]);
 	});
 
-	// if(vWebType == 'PC'){console.log('pc');
+	// if(vWebType == 'PC'){
 
- //        $('.layer-slider-wrap').each(function(idx){
- //            $(this).touch({
- //                // Turn on document tracking so stuff works even if the cursor leaves the trackpad.
- //                trackDocument: true,
- //                // Normalize coordinates when/if the cursor leaves the trackpad.
- //                trackDocumentNormalize: true,
- //                // Prevent default events for drag/swipe (so the page doesn't scroll when you do those gestures).
- //                preventDefault: {
- //                    drag: true,
- //                    swipe: true
- //                }
- //            })
- //            .on('swipeLeft', function(e, o) { layer_slider[idx].goToNextSlide(); })
- //            .on('swipeRight', function(e, o) { layer_slider[idx].goToPrevSlide(); });
- //        });
+    //     $('.layer-slider-wrap').each(function(idx){
+    //         $(this).touch({
+    //             // Turn on document tracking so stuff works even if the cursor leaves the trackpad.
+    //             trackDocument: true,
+    //             // Normalize coordinates when/if the cursor leaves the trackpad.
+    //             trackDocumentNormalize: true,
+    //             // Prevent default events for drag/swipe (so the page doesn't scroll when you do those gestures).
+    //             preventDefault: {
+    //                 drag: true,
+    //                 swipe: true
+    //             }
+    //         })
+    //         .on('swipeLeft', function(e, o) { layer_slider[idx].goToNextSlide(); })
+    //         .on('swipeRight', function(e, o) { layer_slider[idx].goToPrevSlide(); });
+    //     });
 
 	// }
 }
