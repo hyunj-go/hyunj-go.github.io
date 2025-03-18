@@ -88,33 +88,33 @@ function initLayerSlider(){
 			},
 		}
 
-		if(vWebType == 'PC'){
-			layer_option[idx].touchEnabled = false;
-		}else{
-			layer_option[idx].touchEnabled = true;
-		}
+		// if(vWebType == 'PC'){
+		// 	layer_option[idx].touchEnabled = false;
+		// }else{
+		// 	layer_option[idx].touchEnabled = true;
+		// }
 		layer_slider[idx] = $(this).find('.layer-slider').bxSlider(layer_option[idx]);
 	});
 
-	if(vWebType == 'PC'){console.log('pc');
+	// if(vWebType == 'PC'){console.log('pc');
 
-        $('.layer-slider-wrap').each(function(idx){
-            $(this).touch({
-                // Turn on document tracking so stuff works even if the cursor leaves the trackpad.
-                trackDocument: true,
-                // Normalize coordinates when/if the cursor leaves the trackpad.
-                trackDocumentNormalize: true,
-                // Prevent default events for drag/swipe (so the page doesn't scroll when you do those gestures).
-                preventDefault: {
-                    drag: true,
-                    swipe: true
-                }
-            })
-            .on('swipeLeft', function(e, o) { layer_slider[idx].goToNextSlide(); })
-            .on('swipeRight', function(e, o) { layer_slider[idx].goToPrevSlide(); });
-        });
+ //        $('.layer-slider-wrap').each(function(idx){
+ //            $(this).touch({
+ //                // Turn on document tracking so stuff works even if the cursor leaves the trackpad.
+ //                trackDocument: true,
+ //                // Normalize coordinates when/if the cursor leaves the trackpad.
+ //                trackDocumentNormalize: true,
+ //                // Prevent default events for drag/swipe (so the page doesn't scroll when you do those gestures).
+ //                preventDefault: {
+ //                    drag: true,
+ //                    swipe: true
+ //                }
+ //            })
+ //            .on('swipeLeft', function(e, o) { layer_slider[idx].goToNextSlide(); })
+ //            .on('swipeRight', function(e, o) { layer_slider[idx].goToPrevSlide(); });
+ //        });
 
-	}
+	// }
 }
 	</script>
 </body>
