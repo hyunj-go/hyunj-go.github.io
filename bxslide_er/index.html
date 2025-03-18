@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="res/common.css" />
-	
-	<script type="text/javascript" src="res/jquery-3.7.1.min.js"></script>
+
+	<!-- <script type="text/javascript" src="res/jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="res/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="res/jquery.touch.js"></script>
 </head>
@@ -17,12 +18,12 @@
         <div class="swiper-slide item">
             <img src="https://starville.ninebridges.co.kr/upload/contents/activity/6781820250317165316.jpg" alt="">
         </div>
-        <div class="swiper-slide item">
+        <!-- <div class="swiper-slide item">
             <img src="https://starville.ninebridges.co.kr/upload/contents/activity/6781820250317165316.jpg" alt="">
         </div>
         <div class="swiper-slide item">
             <img src="https://starville.ninebridges.co.kr/upload/contents/activity/6781820250317165316.jpg" alt="">
-        </div>
+        </div> -->
     </ul>
     <div class="layer-slider-count"><span class="cur-page">1</span> / <span class="tot-page">1</span></div>
 </div>
@@ -102,12 +103,6 @@ function initLayerSlider(){
 
     //     $('.layer-slider-wrap').each(function(idx){
     //         var $this = $(this);
-    //         // 터치 플러그인 존재 여부 확인
-    //         console.log('Checking touch plugin:', typeof $this.touch);
-    //         if (typeof $this.touch !== "function") {
-    //             console.error("touch plugin is not available on this element.");
-    //             return;
-    //         }
 
     //         $this.touch({
     //             // Turn on document tracking so stuff works even if the cursor leaves the trackpad.
