@@ -55,6 +55,8 @@ function initLayerSlider(){
 		layer_wrap[idx] = $(this);
 		layer_tot_cnt[idx] = $(this).find('.layer-slider').children().length;
 
+        if (layer_tot_cnt[idx] <= 1) return;
+
 		layer_option[idx] = {
 			mode : 'horizontal',
 			infiniteLoop: true,			
