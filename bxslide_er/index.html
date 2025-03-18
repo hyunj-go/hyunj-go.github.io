@@ -88,11 +88,11 @@ function initLayerSlider(){
 			},
 		}
 
-		// if(vWebType == 'PC'){
-		// 	layer_option[idx].touchEnabled = false;
-		// }else{
-		// 	layer_option[idx].touchEnabled = true;
-		// }
+		if(vWebType == 'PC'){
+			layer_option[idx].touchEnabled = false;
+		}else{
+			layer_option[idx].touchEnabled = true;
+		}
 		layer_slider[idx] = $(this).find('.layer-slider').bxSlider(layer_option[idx]);
 	});
 
