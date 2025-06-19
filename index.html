@@ -116,10 +116,10 @@
 
         $dropBtn.val($fOption.find('button').data('value'));
 
-        $dropBtn.click(function(e){ alert('click')
+        $dropBtn.click(function(e){
             e.stopPropagation();
             const _this = $(this);
-            if(_this.attr('aria-expanded') == 'false'){
+            if(_this.attr('aria-expanded') == 'false'){  alert('click open!')
                 _this.siblings('.dd-box').addClass('show');
                 _this.attr('aria-expanded', 'true');
                 _this.siblings('.dd-box').find('button').attr('tabindex', '0');
