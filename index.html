@@ -129,7 +129,8 @@
             }
         });
 
-        $optionBtn.click(function(){
+        $optionBtn.click(function(e){
+            e.stopPropagation();
             const _this = $(this);
             const _thisOption = $(this).parent('.dd-optioin');
             const idx = _thisOption.index();
@@ -146,7 +147,7 @@
             }
         });
 
-        $(document).on('click', function(e) {
+        $(document).on('mousedown touchstart', function(e) {
             if (!$(e.target).closest('.wrap').length) {
                 $dropdownBox.removeClass('show');
                 $dropBtn.attr('aria-expanded', 'false');
