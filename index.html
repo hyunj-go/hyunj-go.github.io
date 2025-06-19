@@ -109,27 +109,24 @@
     $(function(){
         $items = $('[data-control="dropdown"]'),
         $dropBtn = $($items).find('.dd-btn'),
-        $dropdownBox = $($items).find('.dd-box'),
+        $ddBox = $($items).find('.dd-box'),
         $option = $($items).find('.dd-optioin'),
         $optionBtn = $option.find('button'),
-        $fOption = $option.first();
-        isOpen = false;
+        $firstOption = $option.first();
 
-        $dropBtn.val($fOption.find('button').data('value'));
+        $dropBtn.val($firstOption.find('button').data('value'));
 
         $dropBtn.click(function(e){
             e.stopPropagation();
             const _this = $(this);
-            if(!isOpen){
+            if(!_this.siblings('.dd-box').hasClass('show')){
                 _this.siblings('.dd-box').addClass('show'); 
                 _this.attr('aria-expanded', 'true');
                 _this.siblings('.dd-box').find('button').attr('tabindex', '0');
-                isOpen = true;
             } else {
                 _this.siblings('.dd-box').removeClass('show');
                 _this.attr('aria-expanded', 'false');
                 _this.siblings('.dd-box').find('button').attr('tabindex', '-1');
-                isOpen = false;
             }
         });
 
@@ -144,7 +141,6 @@
             _thisDropdownWrap.find('.dd-box').removeClass('show');
             _thisDropdownWrap.find('.dd-btn').attr('aria-expanded', 'false');
             _thisDropdownWrap.find('.dd-box').find('button').attr('tabindex', '-1');
-            isOpen = false;
             _thisDropdownWrap.find('.dd-btn').focus();
 
             if(_thisDropdownSet.find('.dd-cont').length){
@@ -154,20 +150,18 @@
 
         $(document).on('click', function(e) {
             if (!$(e.target).closest('.wrap').length) {
-                $dropdownBox.removeClass('show');
+                $ddBox.removeClass('show');
                 $dropBtn.attr('aria-expanded', 'false');
                 $optionBtn.attr('tabindex', '-1');
-                isOpen = false;
             }
         });
 
         // $($items).on('focusout', function(e) {
         //     setTimeout(() => {
         //         if (!$(e.target).closest('.wrap').find(':focus').length) {
-        //             $dropdownBox.removeClass('show');
+        //             $ddBox.removeClass('show');
         //             $dropBtn.attr('aria-expanded', 'false');
         //             $optionBtn.attr('tabindex', '-1');
-        //             isOpen = false;
         //         }
         //     }, 0);
         // });
