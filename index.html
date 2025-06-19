@@ -161,16 +161,16 @@
             }
         });
 
-        $($items).on('focusout', function(e) {
-            setTimeout(() => {
-                if (!$(e.target).closest('.wrap').find(':focus').length) {
-                    $dropdownBox.removeClass('show');
-                    $dropBtn.attr('aria-expanded', 'false');
-                    $optionBtn.attr('tabindex', '-1');
-                    isOpen = false;
-                }
-            }, 0);
-        });
+        // $($items).on('focusout', function(e) {
+        //     setTimeout(() => {
+        //         if (!$(e.target).closest('.wrap').find(':focus').length) {
+        //             $dropdownBox.removeClass('show');
+        //             $dropBtn.attr('aria-expanded', 'false');
+        //             $optionBtn.attr('tabindex', '-1');
+        //             isOpen = false;
+        //         }
+        //     }, 0);
+        // });
 
 
         function change($el, idx) {
