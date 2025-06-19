@@ -148,13 +148,13 @@
             }
         });
 
-        $(document).on('click', function(e) {
-            if (!$(e.target).closest('.wrap').length) {
-                $dropdownBox.removeClass('show');
-                $dropBtn.attr('aria-expanded', 'false');
-                $optionBtn.attr('tabindex', '-1');
-            }
-        });
+        // $(document).on('click', function(e) {
+        //     if (!$(e.target).closest('.wrap').length) {
+        //         $dropdownBox.removeClass('show');
+        //         $dropBtn.attr('aria-expanded', 'false');
+        //         $optionBtn.attr('tabindex', '-1');
+        //     }
+        // });
 
         $($items).on('focusout', function(e) {
             setTimeout(() => {
