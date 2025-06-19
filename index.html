@@ -36,6 +36,7 @@
         }
 
         .wrap>.dd-box {
+            display:none;
             position: absolute;
             top: 41px;
             left: 0;
@@ -45,14 +46,12 @@
             background-color: #fff;
             border: solid 1px #e3e4e5;
             box-sizing: border-box;
-            opacity: 0;
             pointer-events: none;
             z-index: 3
         }
 
         .wrap>.dd-box.show {
-            opacity: 1;
-            pointer-events: auto
+            display:block;
         }
 
         .wrap>.dd-box>.dd-option>button {
