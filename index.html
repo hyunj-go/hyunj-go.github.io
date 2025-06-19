@@ -122,11 +122,11 @@
              if(!_this.siblings('.dd-box').hasClass('show')){
                 _this.siblings('.dd-box').addClass('show');
                 _this.attr('aria-expanded', 'true');
-                _this.siblings('.dd-box').find('button').attr('tabindex', '0');
+                _this.siblings('.dd-box').find('button').attr('tabindex', '0');alert('open');
             } else {
                 _this.siblings('.dd-box').removeClass('show');
                 _this.attr('aria-expanded', 'false');
-                _this.siblings('.dd-box').find('button').attr('tabindex', '-1');
+                _this.siblings('.dd-box').find('button').attr('tabindex', '-1');alert('close');
             }
         });
 
@@ -138,7 +138,7 @@
             const _thisDropdownSet = _thisOption.parents('.dd-set');
             const _thisDropdownWrap = _thisOption.parents('.wrap');
             _thisDropdownWrap.find('.dd-btn').text(_this.data('value'));
-            _thisDropdownWrap.find('.dd-box').removeClass('show');
+            _thisDropdownWrap.find('.dd-box').removeClass('show');alert('close--option');
             _thisDropdownWrap.find('.dd-btn').attr('aria-expanded', 'false');
             _thisDropdownWrap.find('.dd-box').find('button').attr('tabindex', '-1');
             _thisDropdownWrap.find('.dd-btn').focus();
