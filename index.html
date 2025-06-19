@@ -36,7 +36,6 @@
         }
 
         .wrap>.dd-box {
-            display:none;
             position: absolute;
             top: 41px;
             left: 0;
@@ -46,11 +45,14 @@
             background-color: #fff;
             border: solid 1px #e3e4e5;
             box-sizing: border-box;
+            opacity: 0;
+            pointer-events: none;
             z-index: 3
         }
 
         .wrap>.dd-box.show {
-            display:block;
+            opacity: 1;
+            pointer-events: auto
         }
 
         .wrap>.dd-box>.dd-option>button {
@@ -111,24 +113,27 @@
         $option = $($items).find('.dd-optioin'),
         $optionBtn = $option.find('button'),
         $fOption = $option.first();
+        isOpen = false;
 
         $dropBtn.val($fOption.find('button').data('value'));
 
         $dropBtn.click(function(e){
             e.stopPropagation();
             const _this = $(this);
-             if(!_this.siblings('.dd-box').hasClass('show')){
-                _this.siblings('.dd-box').addClass('show');
+            if(!isOpen){
+                _this.siblings('.dd-box').addClass('show'); 
                 _this.attr('aria-expanded', 'true');
                 _this.siblings('.dd-box').find('button').attr('tabindex', '0');
+                isOpen = true;
             } else {
                 _this.siblings('.dd-box').removeClass('show');
                 _this.attr('aria-expanded', 'false');
-                _this.siblings('.dd-box').find('button').attr('tabindex', '-1');alert('close');
+                _this.siblings('.dd-box').find('button').attr('tabindex', '-1');
+                isOpen = false;
             }
         });
 
-        $optionBtn.click(function(e){alert('option-click');
+        $optionBtn.click(function(e){
             e.stopPropagation();
             const _this = $(this);
             const _thisOption = $(this).parent('.dd-optioin');
@@ -136,9 +141,10 @@
             const _thisDropdownSet = _thisOption.parents('.dd-set');
             const _thisDropdownWrap = _thisOption.parents('.wrap');
             _thisDropdownWrap.find('.dd-btn').text(_this.data('value'));
-            _thisDropdownWrap.find('.dd-box').removeClass('show');alert('close--option');
+            _thisDropdownWrap.find('.dd-box').removeClass('show');
             _thisDropdownWrap.find('.dd-btn').attr('aria-expanded', 'false');
             _thisDropdownWrap.find('.dd-box').find('button').attr('tabindex', '-1');
+            isOpen = false;
             _thisDropdownWrap.find('.dd-btn').focus();
 
             if(_thisDropdownSet.find('.dd-cont').length){
@@ -146,13 +152,14 @@
             }
         });
 
-        // $(document).on('click', function(e) {
-        //     if (!$(e.target).closest('.wrap').length) {
-        //         $dropdownBox.removeClass('show');
-        //         $dropBtn.attr('aria-expanded', 'false');
-        //         $optionBtn.attr('tabindex', '-1');
-        //     }
-        // });
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.wrap').length) {
+                $dropdownBox.removeClass('show');
+                $dropBtn.attr('aria-expanded', 'false');
+                $optionBtn.attr('tabindex', '-1');
+                isOpen = false;
+            }
+        });
 
         $($items).on('focusout', function(e) {
             setTimeout(() => {
@@ -160,6 +167,7 @@
                     $dropdownBox.removeClass('show');
                     $dropBtn.attr('aria-expanded', 'false');
                     $optionBtn.attr('tabindex', '-1');
+                    isOpen = false;
                 }
             }, 0);
         });
