@@ -83,7 +83,7 @@
         <div class="form-wrap" data-control="dropdown">
             <div class="wrap"><button class="dd-btn" aria-expanded="false" aria-haspopup="listbox" class="dd-btn" type="text" value="1234">1234</button>
                 <ul class="dd-box" id="dd-box" role="listbox" title="선택">
-                    <li class="dd-optioin"><button data-value="12341" tabindex="-1">12341</button></li>
+                    <li class="dd-optioin"><button data-value="1234" tabindex="-1">1234</button></li>
                     <li class="dd-optioin"><button data-value="12345" tabindex="-1">12345</button></li>
                     <li class="dd-optioin"><button data-value="123456" tabindex="-1">123456</button></li>
                 </ul>
@@ -119,7 +119,7 @@
         $dropBtn.click(function(e){
             e.stopPropagation();
             const _this = $(this);
-            if(_this.attr('aria-expanded') == 'false'){  
+             if(!_this.siblings('.dd-box').hasClass('show')){
                 _this.siblings('.dd-box').addClass('show');
                 _this.attr('aria-expanded', 'true');
                 _this.siblings('.dd-box').find('button').attr('tabindex', '0');
