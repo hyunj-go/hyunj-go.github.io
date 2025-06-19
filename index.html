@@ -116,7 +116,7 @@
 
         $dropBtn.val($fOption.find('button').data('value'));
 
-        $dropBtn.click(function(e){
+        $dropBtn.click(function(e){ alert('click')
             e.stopPropagation();
             const _this = $(this);
             if(_this.attr('aria-expanded') == 'false'){
@@ -148,7 +148,7 @@
             }
         });
 
-        $(document).on('mousedown touchstart', function(e) {
+        $(document).on('click', function(e) {
             if (!$(e.target).closest('.wrap').length) {
                 $dropdownBox.removeClass('show');
                 $dropBtn.attr('aria-expanded', 'false');
