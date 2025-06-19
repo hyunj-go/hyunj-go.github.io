@@ -122,7 +122,7 @@
              if(!_this.siblings('.dd-box').hasClass('show')){
                 _this.siblings('.dd-box').addClass('show');
                 _this.attr('aria-expanded', 'true');
-                _this.siblings('.dd-box').find('button').attr('tabindex', '0');alert('open');
+                _this.siblings('.dd-box').find('button').attr('tabindex', '0');alert(_this.siblings('.dd-box').css('display'));
             } else {
                 _this.siblings('.dd-box').removeClass('show');
                 _this.attr('aria-expanded', 'false');
