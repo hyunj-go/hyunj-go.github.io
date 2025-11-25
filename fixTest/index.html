@@ -91,14 +91,15 @@
             <option>Option 7</option>
         </select>
     </div>
+    <div class="aaa"></div>
 </body>
     <script>
-        document.ready(function(){
-            alert( document.getElementById('rcvrHp1').getAttribute('placeholder'));
-        });
+        var pltext= document.getElementById('rcvrHp1').getAttribute('placeholder')
+    document.querySelector('.aaa').html(pltext);
     </script>
 
 </html>
+
 
 
 
