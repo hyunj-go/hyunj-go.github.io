@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .ipbox{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 0 0 10px;
+            border: solid 1px #e3e4e5;
+            font-weight: 400;
+            color: #666;
+            background: #fff;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            font-size: 14px;
+        }
+        .pl-wh::placeholder {
+            color:#fff;
+        }
+        .pl-gy::placeholder {
+            color:#d9d9d9;
+        }
+    </style>
 </head>
 <body>
-    <input class="ph-wh" type="text" placeholder="플레이스홀더" >
-    <input class="ph-wh" type="number" placeholder="숫자필드" >
-    <input class="ph-gy" type="number" placeholder="숫자필드2">
+    <input class="pl-wh" type="text" placeholder="플레이스홀더속성" >
+    <input class="pl-wh" type="number" placeholder="숫자필드1" >
+    <input class="pl-gy" type="number" placeholder="숫자필드2">
 
-  <input class="common-ip-type-1 pholder-wh" type="number" pattern="[0-9]*" title="휴대폰번호 앞자리" style="width:27%;" id="rcvrHp1" name="rcvrHp1" maxlength="4" onkeyup="numberCheck(this);" placeholder="앞자리" id="rcvrHp1">
+  <input class="ipbox pl-wh" type="number" pattern="[0-9]*" title="휴대폰번호 앞자리" style="width:27%;" id="rcvrHp1" name="rcvrHp1" maxlength="4" onkeyup="numberCheck(this);" placeholder="앞자리" id="rcvrHp1">
     <div class="aaa"></div>
 </body>
     <script>
