@@ -76,7 +76,7 @@
     </style>
 </head>
 <body>
-    <input class="ph-wh" type="text" placeholder="텍스트필드">
+    <input class="ph-wh" type="text" placeholder="텍스트필드" id="rcvrHp1">
     <input class="ph-wh" type="number" placeholder="숫자필드">
     <input class="ph-gy" type="number" placeholder="숫자필드2">
     <div class="select_box" style="width:128px">
@@ -92,8 +92,12 @@
         </select>
     </div>
 </body>
+    <script>
+       alert( document.getElementById('rcvrHp1').getAttribute('placeholder'));
+    </script>
 
 </html>
+
 
 
 
