@@ -5,6 +5,8 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
     <style>
+        .ph-wh::placeholder {color:#fff}
+
     .select_box {
         display: inline-block;
         position: relative;
@@ -73,8 +75,8 @@
     </style>
 </head>
 <body>
-    <input type="text" placeholder="텍스트필드">
-    <input type="number" placeholder="숫자필드">
+    <input class="ph-wh" type="text" placeholder="텍스트필드">
+    <input class="ph-wh" type="number" placeholder="숫자필드">
     <div class="select_box" style="width:128px">
         <input type="text" value="" readonly="readonly" title="선택" tabindex="-1">
         <select>
@@ -90,3 +92,4 @@
 </body>
 
 </html>
+
