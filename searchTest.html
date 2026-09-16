@@ -5,119 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        a,abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,u,ul,var,video {
-            margin: 0;
-            padding: 0;
-            border: 0
-        }
+      a,
+      abbr,
+      address,
+      article,
+      aside,
+      audio,
+      b,
+      blockquote,
+      body,
+      canvas,
+      caption,
+      cite,
+      code,
+      dd,
+      del,
+      details,
+      dfn,
+      div,
+      dl,
+      dt,
+      em,
+      embed,
+      fieldset,
+      figcaption,
+      figure,
+      footer,
+      form,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      header,
+      html,
+      i,
+      iframe,
+      img,
+      ins,
+      kbd,
+      label,
+      legend,
+      li,
+      mark,
+      nav,
+      object,
+      ol,
+      output,
+      p,
+      pre,
+      q,
+      ruby,
+      s,
+      samp,
+      section,
+      small,
+      span,
+      strong,
+      sub,
+      summary,
+      sup,
+      table,
+      tbody,
+      td,
+      tfoot,
+      th,
+      thead,
+      time,
+      tr,
+      u,
+      ul,
+      var,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
 
-        html {
-            box-sizing: border-box
-        }
+      html {
+        box-sizing: border-box;
+      }
 
-        body,html {
-            -webkit-text-size-adjust: none;
-            -moz-text-size-adjust: none;
-            -ms-text-size-adjust: none;
-            -o-text-size-adjust: none
-        }
+      body,
+      html {
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+      }
 
-        * {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-        *,:after,:before {
-            box-sizing: inherit
-        }
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
 
-        article,aside,dialog,figure,footer,header,main,nav,section {
-            display: block
-        }
+      article,
+      aside,
+      dialog,
+      figure,
+      footer,
+      header,
+      main,
+      nav,
+      section {
+        display: block;
+      }
 
-        h1,h2,h3,h4,h5,h6 {
-            font-size: inherit
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+      }
 
-        ol,ul {
-            list-style: none
-        }
+      ol,
+      ul {
+        list-style: none;
+      }
 
-        table {
-            border-collapse: collapse;
-            border-spacing: 0
-        }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
 
-        address,caption,em {
-            font-style: normal
-        }
+      address,
+      caption,
+      em {
+        font-style: normal;
+      }
 
-        a,a:active,a:focus,a:hover {
-            text-decoration: none
-        }
+      a,
+      a:active,
+      a:focus,
+      a:hover {
+        text-decoration: none;
+      }
 
-        img,svg,video {
-            max-width: 100%;
-            display: block
-        }
+      img,
+      svg,
+      video {
+        max-width: 100%;
+        display: block;
+      }
 
-        button,input,select,textarea {
-            font-family: inherit;
-            font-size: inherit;
-            color: inherit;
-            line-height: inherit
-        }
+      button,
+      input,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
+      }
 
-        button,input[type=button],input[type=submit] {
-            cursor: pointer
-        }
+      button,
+      input[type="button"],
+      input[type="submit"] {
+        cursor: pointer;
+      }
 
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 0
-        }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
+      }
 
-        select::-ms-expand {
-            display: none
-        }
+      select::-ms-expand {
+        display: none;
+      }
 
-        :root {
-            --black: #000;
-            --white: #fff;
-            --color01: #1A1A1A;
-            --color02: #8C8C8C;
-            --color03: #666;
-            --point01: #82DC28;
-            --point02: #2EB200;
-            --point03: #189300;
-            --border01: #D4D4D4;
-            --border02: #D9D9D9;
-            --border03: #E6E6E6;
-            --border04: #131518;
-            --border05: #404040;
-            --border06: #F2F2F2;
-            --border07: #999;
-            --border08: #C9CDD1;
-            --bg01: #F5F7FA;
-            --bg02: #E9F9D8;
-            --bg03: #F6F7F9;
-            --bg04: #F2F2F2;
-            --bg05: #E9ECF0;
-            --alert: #FF3B3B;
-            --font-set: "Pretendard","AppleGothic","Apple SD Gothic Neo","helvetica","Malgun Gothic","맑은 고딕","돋움","Dotum",sans-serif;
-            --header-height: 7.8rem;
-            --header-mobile-height: 5.6rem
-        }
+      :root {
+        --black: #000;
+        --white: #fff;
+        --color01: #1a1a1a;
+        --color02: #8c8c8c;
+        --color03: #666;
+        --point01: #82dc28;
+        --point02: #2eb200;
+        --point03: #189300;
+        --border01: #d4d4d4;
+        --border02: #d9d9d9;
+        --border03: #e6e6e6;
+        --border04: #131518;
+        --border05: #404040;
+        --border06: #f2f2f2;
+        --border07: #999;
+        --border08: #c9cdd1;
+        --bg01: #f5f7fa;
+        --bg02: #e9f9d8;
+        --bg03: #f6f7f9;
+        --bg04: #f2f2f2;
+        --bg05: #e9ecf0;
+        --alert: #ff3b3b;
+        --font-set: "Pretendard", "AppleGothic", "Apple SD Gothic Neo", "helvetica", "Malgun Gothic", "맑은 고딕", "돋움", "Dotum", sans-serif;
+        --header-height: 7.8rem;
+        --header-mobile-height: 5.6rem;
+      }
 
-        body,html {
-            height: 100%;
-            line-height: normal
-        }
-        html {
-                font-size: 62.5%;
-        }
+      body,
+      html {
+        height: 100%;
+        line-height: normal;
+      }
+      html {
+        font-size: 62.5%;
+      }
       body {
         font-family: "Pretendard", "AppleGothic", "Apple SD Gothic Neo", "helvetica", "Malgun Gothic", "맑은 고딕", "돋움", "Dotum", sans-serif;
         font-size: 1.6rem;
@@ -512,7 +614,108 @@
       }
     </style>
   </head>
-  <body>
-    <div class="input-search"><button type="button" class="input-search-trigger"><span class="input-search-trigger-placeholder">매장, 지역 이름 검색</span><i class="icon icon-search" aria-hidden="true"></i></button><div class="input-search-dim" aria-hidden="true"></div><div class="input-search-popover" role="dialog" aria-label="검색"><div class="input-search-popover-bar"><button type="button" class="input-search-back" aria-label="검색 닫기"><i class="icon icon-arrow-back" aria-hidden="true"></i></button><form class="input-search-form" role="search"><input class="input-search-input" placeholder="매장, 지역 이름 검색" aria-label="매장, 지역 이름 검색" type="search" value=""><button type="submit" class="input-search-submit" aria-label="검색"><i class="icon icon-search" aria-hidden="true"></i></button></form></div><div class="input-search-panel"><div class="input-search-recent"><div class="input-search-recent-head"><p class="input-search-recent-title">최근 검색어</p><button type="button" class="input-search-recent-clear" disabled="">전체삭제</button></div><p class="input-search-recent-empty">최근 검색한 내역이 없어요.</p></div></div></div></div>
+  <body style="position: fixed; top: 0px; width: 100%; overflow-y: scroll">
+    <div hidden=""><!--$--><!--/$--></div>
+    <div id="root" class="wrapper">
+      
+      <main id="container" tabindex="-1">
+        <div class="job-list-page content-wrapper">
+          <div class="job-list-header">
+            <div class="content-inner">
+              <div class="input-search">
+                <button type="button" class="input-search-trigger"><span class="input-search-trigger-placeholder">매장, 지역 이름 검색</span><i class="icon icon-search" aria-hidden="true"></i></button>
+                <div class="input-search-dim" aria-hidden="true"></div>
+                <div class="input-search-popover" role="dialog" aria-label="검색">
+                  <div class="input-search-popover-bar">
+                    <button type="button" class="input-search-back" aria-label="검색 닫기"><i class="icon icon-arrow-back" aria-hidden="true"></i></button>
+                    <form class="input-search-form" role="search">
+                      <input class="input-search-input" placeholder="매장, 지역 이름 검색" aria-label="매장, 지역 이름 검색" type="search" value="" /><button type="submit" class="input-search-submit" aria-label="검색"><i class="icon icon-search" aria-hidden="true"></i></button>
+                    </form>
+                  </div>
+                  <div class="input-search-panel">
+                    <div class="input-search-recent">
+                      <div class="input-search-recent-head">
+                        <p class="input-search-recent-title">최근 검색어</p>
+                        <button type="button" class="input-search-recent-clear" disabled="">전체삭제</button>
+                      </div>
+                      <p class="input-search-recent-empty">최근 검색한 내역이 없어요.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job-filter-bar">
+                <button type="button" class="job-filter-bar-toggle" aria-label="공고 필터 열기" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r_1_" data-state="closed">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.96411 14.0605C9.79092 14.0605 10.5841 14.39 11.1687 14.9746C11.526 15.332 11.788 15.7676 11.9377 16.2417H20.4998C21.0175 16.2417 21.4373 16.6614 21.4373 17.1792C21.4369 17.6967 21.0173 18.1167 20.4998 18.1167H11.9363C11.7865 18.5901 11.5256 19.0253 11.1687 19.3823C10.5841 19.967 9.79092 20.2964 8.96411 20.2964C8.13735 20.2964 7.34413 19.9669 6.75952 19.3823C6.40243 19.0251 6.14276 18.5896 5.99341 18.1167H3.50024C2.98268 18.1167 2.56307 17.6967 2.56274 17.1792C2.56274 16.6614 2.98248 16.2417 3.50024 16.2417H5.99341C6.14272 15.7683 6.40208 15.3322 6.75952 14.9746C7.34413 14.39 8.13735 14.0606 8.96411 14.0605ZM8.96411 15.9355C8.63463 15.9356 8.31819 16.0673 8.08521 16.3003C7.85242 16.5333 7.72192 16.8498 7.72192 17.1792C7.72208 17.5083 7.85264 17.8238 8.08521 18.0566C8.31819 18.2896 8.63463 18.4214 8.96411 18.4214C9.29364 18.4214 9.61 18.2897 9.84302 18.0566C10.0764 17.823 10.2076 17.5072 10.2078 17.1792C10.2078 16.8509 10.0767 16.5341 9.84302 16.3003C9.61 16.0673 9.29364 15.9355 8.96411 15.9355ZM15.0293 3.7041C15.4385 3.70415 15.8436 3.78485 16.2217 3.94141C16.5999 4.09807 16.9444 4.32721 17.2339 4.6167C17.5234 4.90618 17.7525 5.25068 17.9092 5.62891C17.9437 5.71233 17.9728 5.79776 18 5.88379H20.4998C21.0174 5.88379 21.4371 6.30367 21.4373 6.82129C21.4373 7.33906 21.0175 7.75879 20.4998 7.75879H18C17.9727 7.84511 17.9438 7.93144 17.9092 8.01514C17.7526 8.39306 17.5231 8.73657 17.2339 9.02588C16.9444 9.31536 16.5999 9.5445 16.2217 9.70117C15.8436 9.85779 15.4386 9.93843 15.0293 9.93848C14.2025 9.93848 13.4093 9.61051 12.8247 9.02588C12.4672 8.66836 12.208 8.23222 12.0586 7.75879H3.50024C2.98248 7.75879 2.56274 7.33906 2.56274 6.82129C2.56291 6.30367 2.98258 5.88379 3.50024 5.88379H12.0586C12.208 5.41058 12.4673 4.97408 12.8247 4.6167C13.4093 4.03226 14.2026 3.7041 15.0293 3.7041ZM15.0293 5.5791C14.6999 5.5791 14.3834 5.70958 14.1504 5.94238C13.9174 6.17532 13.7872 6.49187 13.7871 6.82129C13.7871 7.15082 13.9174 7.46718 14.1504 7.7002C14.3834 7.9332 14.6998 8.06348 15.0293 8.06348C15.1922 8.06343 15.3534 8.03198 15.5039 7.96973C15.6547 7.90729 15.7928 7.81557 15.9082 7.7002C16.0233 7.585 16.1139 7.44779 16.1763 7.29736C16.2396 7.14458 16.2729 6.98227 16.2729 6.82129C16.2729 6.6605 16.2394 6.49928 16.1763 6.34668C16.1138 6.19594 16.0236 6.05776 15.9082 5.94238C15.7928 5.82701 15.6547 5.73676 15.5039 5.67432C15.3533 5.61198 15.1923 5.57915 15.0293 5.5791Z"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="job-filter-bar-chips">
+                  <button type="button" class="job-filter-bar-chip">
+                    <span>지역</span
+                    ><span class="job-filter-bar-chip-caret" aria-hidden="true"
+                      ><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.43114 6.37201L0.176048 1.13481C0.117365 1.06237 0.0733533 0.984039 0.044012 0.899816C0.0146707 0.815592 0 0.73051 0 0.644567C0 0.472683 0.0494016 0.322284 0.148204 0.19337C0.247006 0.0644567 0.377245 0 0.538922 0H9.46108C9.62275 0 9.75299 0.0662992 9.8518 0.198896C9.9506 0.331493 10 0.486188 10 0.662983C10 0.687538 9.94132 0.844322 9.82395 1.13333L5.56886 6.37201C5.48902 6.47023 5.3992 6.54389 5.2994 6.593C5.1996 6.64211 5.0998 6.66667 5 6.66667C4.9002 6.66667 4.8004 6.64211 4.7006 6.593C4.6008 6.54389 4.51098 6.47023 4.43114 6.37201Z"
+                        ></path></svg
+                    ></span></button
+                  ><button type="button" class="job-filter-bar-chip">
+                    <span>모집 분야</span
+                    ><span class="job-filter-bar-chip-caret" aria-hidden="true"
+                      ><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.43114 6.37201L0.176048 1.13481C0.117365 1.06237 0.0733533 0.984039 0.044012 0.899816C0.0146707 0.815592 0 0.73051 0 0.644567C0 0.472683 0.0494016 0.322284 0.148204 0.19337C0.247006 0.0644567 0.377245 0 0.538922 0H9.46108C9.62275 0 9.75299 0.0662992 9.8518 0.198896C9.9506 0.331493 10 0.486188 10 0.662983C10 0.687538 9.94132 0.844322 9.82395 1.13333L5.56886 6.37201C5.48902 6.47023 5.3992 6.54389 5.2994 6.593C5.1996 6.64211 5.0998 6.66667 5 6.66667C4.9002 6.66667 4.8004 6.64211 4.7006 6.593C4.6008 6.54389 4.51098 6.47023 4.43114 6.37201Z"
+                        ></path></svg
+                    ></span></button
+                  ><button type="button" class="job-filter-bar-chip">
+                    <span>기간</span
+                    ><span class="job-filter-bar-chip-caret" aria-hidden="true"
+                      ><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.43114 6.37201L0.176048 1.13481C0.117365 1.06237 0.0733533 0.984039 0.044012 0.899816C0.0146707 0.815592 0 0.73051 0 0.644567C0 0.472683 0.0494016 0.322284 0.148204 0.19337C0.247006 0.0644567 0.377245 0 0.538922 0H9.46108C9.62275 0 9.75299 0.0662992 9.8518 0.198896C9.9506 0.331493 10 0.486188 10 0.662983C10 0.687538 9.94132 0.844322 9.82395 1.13333L5.56886 6.37201C5.48902 6.47023 5.3992 6.54389 5.2994 6.593C5.1996 6.64211 5.0998 6.66667 5 6.66667C4.9002 6.66667 4.8004 6.64211 4.7006 6.593C4.6008 6.54389 4.51098 6.47023 4.43114 6.37201Z"
+                        ></path></svg
+                    ></span></button
+                  ><button type="button" class="job-filter-bar-chip">
+                    <span>요일</span
+                    ><span class="job-filter-bar-chip-caret" aria-hidden="true"
+                      ><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.43114 6.37201L0.176048 1.13481C0.117365 1.06237 0.0733533 0.984039 0.044012 0.899816C0.0146707 0.815592 0 0.73051 0 0.644567C0 0.472683 0.0494016 0.322284 0.148204 0.19337C0.247006 0.0644567 0.377245 0 0.538922 0H9.46108C9.62275 0 9.75299 0.0662992 9.8518 0.198896C9.9506 0.331493 10 0.486188 10 0.662983C10 0.687538 9.94132 0.844322 9.82395 1.13333L5.56886 6.37201C5.48902 6.47023 5.3992 6.54389 5.2994 6.593C5.1996 6.64211 5.0998 6.66667 5 6.66667C4.9002 6.66667 4.8004 6.64211 4.7006 6.593C4.6008 6.54389 4.51098 6.47023 4.43114 6.37201Z"
+                        ></path></svg
+                    ></span></button
+                  ><button type="button" class="job-filter-bar-chip">
+                    <span>시간</span
+                    ><span class="job-filter-bar-chip-caret" aria-hidden="true"
+                      ><svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.43114 6.37201L0.176048 1.13481C0.117365 1.06237 0.0733533 0.984039 0.044012 0.899816C0.0146707 0.815592 0 0.73051 0 0.644567C0 0.472683 0.0494016 0.322284 0.148204 0.19337C0.247006 0.0644567 0.377245 0 0.538922 0H9.46108C9.62275 0 9.75299 0.0662992 9.8518 0.198896C9.9506 0.331493 10 0.486188 10 0.662983C10 0.687538 9.94132 0.844322 9.82395 1.13333L5.56886 6.37201C5.48902 6.47023 5.3992 6.54389 5.2994 6.593C5.1996 6.64211 5.0998 6.66667 5 6.66667C4.9002 6.66667 4.8004 6.64211 4.7006 6.593C4.6008 6.54389 4.51098 6.47023 4.43114 6.37201Z"
+                        ></path></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="job-list-viewmode-sticky-anchor">
+            <button type="button" class="job-list-viewmode-toggle-mo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M11.139 22.0367C4.50012 13.5 3.62012 13 3.62012 10.1093C3.62012 5.35482 7.37333 1.5 12.0025 1.5C16.6316 1.5 20.3848 5.35482 20.3848 10.1093C20.3848 13 19.5001 13.5 12.8634 22.0367C12.4467 22.6544 11.5558 22.6544 11.139 22.0367Z" fill="#1A1A1A"></path>
+                <g clip-path="url(#_r_5_)">
+                  <path d="M11.9998 5.5C9.23837 5.5 7 7.73837 7 10.4998C7 13.2612 9.23837 15.4996 11.9998 15.4996C14.7612 15.4996 16.9996 13.2612 16.9996 10.4998C16.9996 7.73837 14.7612 5.5 11.9998 5.5ZM14.6308 11.1072C14.0843 13.4748 12.4631 15.1223 11.0104 14.7868C9.55723 14.4514 8.82275 12.2599 9.36924 9.89234C9.91573 7.52481 11.5369 5.87725 12.9896 6.21273C14.4423 6.54821 15.1772 8.73969 14.6308 11.1072Z" fill="#82DC28"></path>
+                  <path d="M13.5178 8.15979C13.3511 8.8755 12.8016 9.35805 12.2905 9.23997C11.7786 9.12147 11.4985 8.44624 11.6626 7.73138C11.8289 7.01822 12.3766 6.53525 12.8882 6.6529C13.4002 6.77141 13.6823 7.44578 13.5182 8.15979" fill="#82DC28"></path>
+                </g>
+                <defs>
+                  <clipPath id="_r_5_"><rect width="10" height="10" fill="white" transform="translate(7 5.5)"></rect></clipPath>
+                </defs></svg
+              >지도보기
+            </button>
+          </div>
+          <span type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r_6_" data-state="closed" style="display: none"></span>
+        </div>
+        <!--$--><!--/$-->
+      </main>
+    </div>
+    
   </body>
 </html>
