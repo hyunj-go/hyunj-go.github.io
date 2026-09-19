@@ -1963,7 +1963,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					
 					
 					
-						<a class="anchor" href="/ko/tool/parcel/reservation-general" title="현재 선택"><span class="bg-1">개인택배예약</span></a>
+						<a class="anchor" href="/ko/tool/parcel/reservation-general" title="현재 선택"><span class="bg-1">예약</span></a>
 					
 					
 				</li>
@@ -4341,17 +4341,7 @@ wptg_tagscript_vars.push(
 				$('.processStep').eq(1).addClass('show');
 				$('.processStep').eq(2).addClass('show');
 
-				// 안드로이드 카카오톡 인앱브라우저 대응: 사용자가 실제 입력 필드를 탭하기 전에
-				// 화면 밖 더미 input을 focus→blur 해서 IME(키보드) 연결을 미리 워밍업.
-				// (페이지 진입 후 첫 입력 필드 탭에서만 키보드가 안 뜨는 현상 방지)
-				var $imeWarmup = $('<input type="text" tabindex="-1">')
-					.css({ position:'absolute', top:0, left:0, width:'1px', height:'1px', opacity:0, border:'none', padding:0, pointerEvents:'none' })
-					.appendTo('body');
-				$imeWarmup[0].focus();
-				setTimeout(function(){
-					$imeWarmup[0].blur();
-					$imeWarmup.remove();
-				}, 100);
+			
 
 				// top-whNotice-required 표시
 				$('.box-toolList-1 .top-whNotice-required').css('display', 'block');
